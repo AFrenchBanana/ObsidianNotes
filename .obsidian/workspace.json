@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/PrivEsc/Windows Group Privileges.md",
+                "file": "Windows/PrivEsc/HTB Cheat Sheet.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 228.5,
-    "collapsed": true
+    "width": 228.5
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/PrivEsc/Windows Group Privileges.md",
+                "file": "Windows/PrivEsc/HTB Cheat Sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/PrivEsc/Windows Group Privileges.md",
+                "file": "Windows/PrivEsc/HTB Cheat Sheet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/PrivEsc/Windows Group Privileges.md"
+                "file": "Windows/PrivEsc/HTB Cheat Sheet.md"
               }
             }
           }
@@ -151,6 +150,7 @@
   "lastOpenFiles": [
     "Windows/PrivEsc/Enumeration Commands.md",
     "Windows/PrivEsc/Windows User Privileges.md",
+    "Windows/PrivEsc/HTB Cheat Sheet.md",
     "Windows/PrivEsc/Windows Group Privileges.md",
     "Windows/Windows Commands.md",
     "Windows/PrivEsc",
