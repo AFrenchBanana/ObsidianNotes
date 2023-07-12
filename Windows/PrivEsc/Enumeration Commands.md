@@ -1,6 +1,7 @@
 Enumeration:
 
 	RDP Via Linux - rdesktop <ip> -u <username> -p <password>
+	OR xfreerdp /v:<IP> /u:<username
 
 	print routes = route print
 
