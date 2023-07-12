@@ -149,10 +149,10 @@
   },
   "active": "f8d1163377bd0bb7",
   "lastOpenFiles": [
-    "Windows/PrivEsc/Windows User Privileges.md",
     "Windows/PrivEsc/Enumeration Commands.md",
-    "Windows/Windows Commands.md",
+    "Windows/PrivEsc/Windows User Privileges.md",
     "Windows/PrivEsc/Windows Group Privileges.md",
+    "Windows/Windows Commands.md",
     "Windows/PrivEsc",
     "Images/SeTakeOwnership Privilige.png",
     "Images/psgetsys script.png",

