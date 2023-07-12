@@ -30,7 +30,6 @@ Enumeration:
 	Installed Programs 
 		'wmic product get name' or 'Get-WmiObject -Class Win32_Product | select Name, Version' 
 		[WMIC](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page)
-
 	Running Processes = 'netstat -ano'
 		 Look for active network connections on loopback
 			 127.0.0.1 / ::1 
@@ -44,7 +43,6 @@ Enumeration:
 		All Groups = 'net localgroup'
 		Group Details 'net localgroup "<group name>"'
 		Password Policy = 'net accounts'
-		
 
 	Name Pipes
 		Files stored in memory
@@ -58,6 +56,4 @@ Enumeration:
 			Attacking a Pipe
 				List Pipes that have write permissions:
 					"accesschk.exe -accepteula -w \pipe\* -v"
-		https://learn.microsoft.com/en-us/sysinternals/downloads/pipelist
-
-	
+		https://learn.microsoft.com/en-us/sysinternals/downloads/pipelist	

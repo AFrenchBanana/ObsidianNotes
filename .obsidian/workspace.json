@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Windows User Privileges.md",
+                "file": "Windows/PrivEsc/Windows Group Privileges.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 228.5,
+    "collapsed": true
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/Windows User Privileges.md",
+                "file": "Windows/PrivEsc/Windows Group Privileges.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/Windows User Privileges.md",
+                "file": "Windows/PrivEsc/Windows Group Privileges.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/Windows User Privileges.md"
+                "file": "Windows/PrivEsc/Windows Group Privileges.md"
               }
             }
           }
@@ -148,9 +149,15 @@
   },
   "active": "f8d1163377bd0bb7",
   "lastOpenFiles": [
+    "Windows/PrivEsc/Windows User Privileges.md",
+    "Windows/PrivEsc/Windows Group Privileges.md",
+    "Windows/PrivEsc/Enumeration Commands.md",
+    "Windows/Windows Commands.md",
+    "Windows/PrivEsc",
+    "Images/SeTakeOwnership Privilige.png",
+    "Images/psgetsys script.png",
+    "Images/Dump File.png",
     "Images/Windows Authorisation Process.png",
-    "Windows/Windows User Privileges.md",
-    "Images",
-    "Windows/Enumeration Commands.md"
+    "Images"
   ]
 }
