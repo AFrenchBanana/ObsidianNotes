@@ -13,13 +13,62 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/PrivEsc/Attacking Windows.md",
+                "file": "Windows/PrivEsc/9. HTB Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b6841b1ffe678238",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9bc04e1e9de8f774",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c29ed5bc0cccc91c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/PrivEsc/5. Credential Hunting.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "31e7eb751374e1e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/PrivEsc/6.  Additional Techniques.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -65,12 +114,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 228.5
+    "width": 357.5
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -86,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/PrivEsc/Attacking Windows.md",
+                "file": "Windows/PrivEsc/6.  Additional Techniques.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/PrivEsc/Attacking Windows.md",
+                "file": "Windows/PrivEsc/6.  Additional Techniques.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/PrivEsc/Attacking Windows.md"
+                "file": "Windows/PrivEsc/6.  Additional Techniques.md"
               }
             }
           }
@@ -147,15 +195,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "da6ba649dec6df11",
+  "active": "31e7eb751374e1e8",
   "lastOpenFiles": [
+    "Windows/PrivEsc/4. Attacking Windows.md",
+    "Windows/PrivEsc/2. Windows User Privileges.md",
+    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+    "Windows/PrivEsc/8. Windows - Privilege Escalation - PAYLOAD ALL THINGS 1.md",
+    "Windows/PrivEsc/6.  Additional Techniques.md",
+    "Windows/PrivEsc/5. Credential Hunting.md",
+    "Windows/PrivEsc/3. Windows Group Privileges.md",
+    "Windows/PrivEsc/9. HTB Cheat Sheet.md",
+    "Windows/PrivEsc/Windows - Privilege Escalation.md",
+    "Windows/PrivEsc/1 .Enumeration Commands.md",
     "local admin.md",
-    "Windows/PrivEsc/Attacking Windows.md",
-    "Windows/PrivEsc/Enumeration Commands.md",
-    "Windows/PrivEsc/Windows Group Privileges.md",
     "Untitled",
-    "Windows/PrivEsc/Windows User Privileges.md",
-    "Windows/PrivEsc/HTB Cheat Sheet.md",
     "EnableSeLoadDriverPrivilige.cpp",
     "Windows/Windows Commands.md",
     "Windows/PrivEsc",
