@@ -4,18 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "81b8ed9cc4223ebf",
+        "id": "fd94747b9737f862",
         "type": "tabs",
         "children": [
           {
-            "id": "4843fee7d26d67c6",
+            "id": "d9ce7bc23351c007",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
-                "mode": "source",
-                "source": false
+                "file": "Notes MindMap.canvas",
+                "viewState": {
+                  "x": 2418.389884692839,
+                  "y": -202.23655298351218,
+                  "zoom": -2.0143159964052573
+                }
               }
             }
           }
@@ -48,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "PowerUp",
+                "query": "tag:#Tools",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,13 +68,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 357.5,
-    "collapsed": true
+    "width": 357.5
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -87,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+                "file": "Notes MindMap.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+                "file": "Notes MindMap.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md"
+                "file": "Notes MindMap.canvas"
               }
             }
           }
@@ -148,36 +149,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4843fee7d26d67c6",
+  "active": "d9ce7bc23351c007",
   "lastOpenFiles": [
+    "Tools/Gobuster Cheat Sheet.md",
+    "Notes MindMap.canvas",
+    "Tools/SQL MAP.md",
+    "Linux/Commands Cheat Sheet.md",
+    "Linux/Linux PrivEsc.md",
+    "Linux",
+    "Windows/PrivEsc/Legacy Operating Systems.md",
+    "Skills assesment.md",
+    "Windows/PrivEsc/1 .Enumeration Commands.md",
+    "Windows/Windows Commands.md",
     "Tools/ffuf_cheatsheet.md",
+    "Tools/BurpSuite.md",
+    "Tools/Hashcat_Cheatsheet.md",
     "Tools/Java_Script_DeObfusication.md",
+    "Tools/Login_BruteForcing.md",
+    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
     "Tools/cheatsheet-19.md",
     "Tools/cheatsheet-57.md",
     "Tools/cheatsheet-20.md",
     "Tools/cheatsheet-110.md",
     "Tools/cheatsheet-41.md",
     "Tools/cheatsheet-54.md",
-    "Tools/Login_BruteForcing.md",
-    "Tools/Hashcat_Cheatsheet.md",
-    "Tools/BurpSuite.md",
     "Tools/hashcat_markdown.md",
     "Tools/hashcat_markdown.mf.zip",
     "Tools/nmap-cheatsheet.md",
     "Tools",
     "Windows/PrivEsc/4. Attacking Windows.md",
     "Windows/PrivEsc/2. Windows User Privileges.md",
-    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
-    "Windows/PrivEsc/1 .Enumeration Commands.md",
-    "Windows/Windows Commands.md",
     "Windows/PrivEsc/6.  Additional Techniques.md",
-    "Skills assesment.md",
-    "Windows/PrivEsc/Legacy Operating Systems.md",
-    "Windows/PrivEsc/9. HTB Cheat Sheet.md",
-    "Windows/PrivEsc/5. Credential Hunting.md",
-    "Windows/PrivEsc/8. Windows - Privilege Escalation - PAYLOAD ALL THINGS 1.md",
-    "Windows/PrivEsc/3. Windows Group Privileges.md",
-    "Windows/PrivEsc/Windows - Privilege Escalation.md",
     "Untitled",
     "EnableSeLoadDriverPrivilige.cpp",
     "Windows/PrivEsc",
