@@ -15,14 +15,61 @@
               "state": {
                 "file": "Notes MindMap.canvas",
                 "viewState": {
-                  "x": 2418.389884692839,
-                  "y": -202.23655298351218,
-                  "zoom": -2.0143159964052573
+                  "x": 415.70177917782104,
+                  "y": -724.4086244887465,
+                  "zoom": -1.317954864959304
                 }
               }
             }
+          },
+          {
+            "id": "54be67770a265874",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Footprinting/1. Parts of Enumiration.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e710da1f98de2dbb",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20230724161954.png"
+              }
+            }
+          },
+          {
+            "id": "64de94da2a3374a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Footprinting/3. Protocols/FTP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "02aeb3e62d10c9f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Footprinting/3. Protocols/SMB.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -51,7 +98,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Tools",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,7 +119,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 357.5
+    "width": 251.5,
+    "collapsed": true
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -88,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes MindMap.canvas",
+                "file": "2. Footprinting/3. Protocols/SMB.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes MindMap.canvas",
+                "file": "2. Footprinting/3. Protocols/SMB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes MindMap.canvas"
+                "file": "2. Footprinting/3. Protocols/SMB.md"
               }
             }
           }
@@ -149,11 +197,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d9ce7bc23351c007",
+  "active": "02aeb3e62d10c9f0",
   "lastOpenFiles": [
-    "Tools/Gobuster Cheat Sheet.md",
+    "2. Footprinting/3. Protocols/FTP.md",
+    "2. Footprinting/3. Protocols/SMB.md",
+    "Pasted image 20230724161954.png",
+    "2. Footprinting/2. Domain Information.md",
+    "2. Footprinting/3. Protocols",
+    "2. Footprinting/1. Parts of Enumiration.md",
     "Notes MindMap.canvas",
-    "Tools/SQL MAP.md",
+    "2. Footprinting",
+    "1. Tools/Hashcat_Cheatsheet.md",
+    "1. Tools/nmap-cheatsheet.md",
+    "Windows/PrivEsc/3. Windows Group Privileges.md",
+    "1. Tools/SQL MAP.md",
+    "1. Tools/Gobuster Cheat Sheet.md",
     "Linux/Commands Cheat Sheet.md",
     "Linux/Linux PrivEsc.md",
     "Linux",
@@ -161,11 +219,10 @@
     "Skills assesment.md",
     "Windows/PrivEsc/1 .Enumeration Commands.md",
     "Windows/Windows Commands.md",
-    "Tools/ffuf_cheatsheet.md",
-    "Tools/BurpSuite.md",
-    "Tools/Hashcat_Cheatsheet.md",
-    "Tools/Java_Script_DeObfusication.md",
-    "Tools/Login_BruteForcing.md",
+    "1. Tools/ffuf_cheatsheet.md",
+    "1. Tools/BurpSuite.md",
+    "1. Tools/Java_Script_DeObfusication.md",
+    "1. Tools/Login_BruteForcing.md",
     "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
     "Tools/cheatsheet-19.md",
     "Tools/cheatsheet-57.md",
@@ -173,20 +230,14 @@
     "Tools/cheatsheet-110.md",
     "Tools/cheatsheet-41.md",
     "Tools/cheatsheet-54.md",
-    "Tools/hashcat_markdown.md",
     "Tools/hashcat_markdown.mf.zip",
-    "Tools/nmap-cheatsheet.md",
-    "Tools",
-    "Windows/PrivEsc/4. Attacking Windows.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
-    "Windows/PrivEsc/6.  Additional Techniques.md",
-    "Untitled",
+    "1. Tools",
     "EnableSeLoadDriverPrivilige.cpp",
     "Windows/PrivEsc",
-    "Images/SeTakeOwnership Privilige.png",
-    "Images/psgetsys script.png",
-    "Images/Dump File.png",
-    "Images/Windows Authorisation Process.png",
-    "Images"
+    "0. Images/SeTakeOwnership Privilige.png",
+    "0. Images/psgetsys script.png",
+    "0. Images/Dump File.png",
+    "0. Images/Windows Authorisation Process.png",
+    "0. Images"
   ]
 }
