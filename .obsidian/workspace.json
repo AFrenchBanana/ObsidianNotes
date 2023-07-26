@@ -4,72 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "fd94747b9737f862",
+        "id": "df00f6b76779d460",
         "type": "tabs",
         "children": [
           {
-            "id": "d9ce7bc23351c007",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Notes MindMap.canvas",
-                "viewState": {
-                  "x": 415.70177917782104,
-                  "y": -724.4086244887465,
-                  "zoom": -1.317954864959304
-                }
-              }
-            }
-          },
-          {
-            "id": "54be67770a265874",
+            "id": "27d26c3121d39d9b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Footprinting/1. Parts of Enumiration.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e710da1f98de2dbb",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Pasted image 20230724161954.png"
-              }
-            }
-          },
-          {
-            "id": "64de94da2a3374a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Footprinting/3. Protocols/FTP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "02aeb3e62d10c9f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Footprinting/3. Protocols/SMB.md",
+                "file": "2. Footprinting/3. Protocols/FTP - Port 20 21.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -119,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
+    "width": 215.5,
     "collapsed": true
   },
   "right": {
@@ -136,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2. Footprinting/3. Protocols/SMB.md",
+                "file": "2. Footprinting/3. Protocols/FTP - Port 20 21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2. Footprinting/3. Protocols/SMB.md",
+                "file": "2. Footprinting/3. Protocols/FTP - Port 20 21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2. Footprinting/3. Protocols/SMB.md"
+                "file": "2. Footprinting/3. Protocols/FTP - Port 20 21.md"
               }
             }
           }
@@ -197,15 +147,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "02aeb3e62d10c9f0",
+  "active": "27d26c3121d39d9b",
   "lastOpenFiles": [
-    "2. Footprinting/3. Protocols/FTP.md",
-    "2. Footprinting/3. Protocols/SMB.md",
-    "Pasted image 20230724161954.png",
+    "2. Footprinting/3. Protocols/SMB Port 139,445.md",
+    "2. Footprinting/3. Protocols/DNS Port 53.md",
+    "2. Footprinting/3. Protocols/FTP - Port 20 21.md",
+    "2. Footprinting/3. Protocols/Linux Remote Management Protocols.md",
+    "2. Footprinting/3. Protocols/Windows Remote Management protocols.md",
+    "2. Footprinting/3. Protocols/IPMI Port UDP623.md",
+    "2. Footprinting/3. Protocols/SNMP Port UDP161+2.md",
+    "2. Footprinting/3. Protocols/MySQL Port 3306.md",
+    "2. Footprinting/3. Protocols/MSSQL Port 1443.md",
+    "2. Footprinting/3. Protocols/Oracle TNS Port 1521.md",
+    "2. Footprinting/3. Protocols/IMAP + POP3 Port 110 143 993 995.md",
+    "2. Footprinting/3. Protocols/NFS Port-111.md",
+    "2. Footprinting/3. Protocols/SMTP Port 25, 587.md",
+    "0. Images/Pasted image 20230725171835.png",
+    "0. Images/EnumirationParts.png",
+    "Notes MindMap.canvas",
     "2. Footprinting/2. Domain Information.md",
     "2. Footprinting/3. Protocols",
     "2. Footprinting/1. Parts of Enumiration.md",
-    "Notes MindMap.canvas",
     "2. Footprinting",
     "1. Tools/Hashcat_Cheatsheet.md",
     "1. Tools/nmap-cheatsheet.md",
@@ -219,17 +181,6 @@
     "Skills assesment.md",
     "Windows/PrivEsc/1 .Enumeration Commands.md",
     "Windows/Windows Commands.md",
-    "1. Tools/ffuf_cheatsheet.md",
-    "1. Tools/BurpSuite.md",
-    "1. Tools/Java_Script_DeObfusication.md",
-    "1. Tools/Login_BruteForcing.md",
-    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
-    "Tools/cheatsheet-19.md",
-    "Tools/cheatsheet-57.md",
-    "Tools/cheatsheet-20.md",
-    "Tools/cheatsheet-110.md",
-    "Tools/cheatsheet-41.md",
-    "Tools/cheatsheet-54.md",
     "Tools/hashcat_markdown.mf.zip",
     "1. Tools",
     "EnableSeLoadDriverPrivilige.cpp",
