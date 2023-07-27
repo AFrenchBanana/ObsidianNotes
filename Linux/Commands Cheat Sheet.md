@@ -29,6 +29,7 @@
 
 # Basics
 ## File Hierarchy Standard (FHS)
+
 | Path   | Content                             |
 | ------ | ----------------------------------- |
 | /bin   | Binaries (User)                     |

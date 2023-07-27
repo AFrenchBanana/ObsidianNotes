@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Enumiration/Information Gathering/Active Gathering.md",
+                "file": "Windows/PrivEsc/1 .Enumeration Commands.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Enumiration/Information Gathering/Active Gathering.md",
+                "file": "Windows/PrivEsc/1 .Enumeration Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Enumiration/Information Gathering/Active Gathering.md",
+                "file": "Windows/PrivEsc/1 .Enumeration Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Enumiration/Information Gathering/Active Gathering.md"
+                "file": "Windows/PrivEsc/1 .Enumeration Commands.md"
               }
             }
           }
@@ -149,39 +148,41 @@
   },
   "active": "9fb90a5047fda714",
   "lastOpenFiles": [
-    "Pasted image 20230727155034.png",
-    "Enumiration/2. Footprinting/3. Protocols/DNS Port 53.md",
-    "Enumiration/Information Gathering/Active Gathering.md",
-    "Enumiration/Information Gathering/Passive Gathering.md",
-    "Enumiration/Information Gathering/Information Gathering.md",
-    "Enumiration.md",
-    "Enumiration",
-    "0. Images/Pasted image 20230727133316.png",
-    "Enumiration/2. Footprinting/3. Protocols/IMAP + POP3 Port 110 143 993 995.md",
-    "Enumiration/Information Gathering",
-    "Enumiration/2. Footprinting/3. Protocols/SNMP Port UDP161+2.md",
-    "Enumiration/2. Footprinting/3. Protocols/IPMI Port UDP623.md",
-    "Windows/PrivEsc/5. Credential Hunting.md",
-    "Enumiration/2. Footprinting/3. Protocols/Windows Remote Management protocols.md",
-    "Enumiration/2. Footprinting/3. Protocols/MySQL Port 3306.md",
-    "Enumiration/2. Footprinting/3. Protocols/MSSQL Port 1443.md",
-    "Enumiration/2. Footprinting/3. Protocols/SMTP Port 25, 587.md",
-    "Enumiration/2. Footprinting/3. Protocols/SMB Port 139,445.md",
-    "Enumiration/2. Footprinting/3. Protocols/NFS Port-111.md",
-    "Enumiration/2. Footprinting/3. Protocols/FTP - Port 20 21.md",
-    "Enumiration/2. Footprinting/3. Protocols/Linux Remote Management Protocols.md",
-    "Enumiration/2. Footprinting/3. Protocols/Oracle TNS Port 1521.md",
-    "0. Images/Pasted image 20230725171835.png",
-    "0. Images/EnumirationParts.png",
-    "Notes MindMap.canvas",
-    "Enumiration/2. Footprinting/2. Domain Information.md",
-    "Enumiration/2. Footprinting/3. Protocols",
-    "Enumiration/2. Footprinting/1. Parts of Enumiration.md",
-    "Enumiration/2. Footprinting",
-    "1. Tools/Hashcat_Cheatsheet.md",
-    "1. Tools/nmap-cheatsheet.md",
+    "Windows/PrivEsc/2. Windows User Privileges.md",
     "Windows/PrivEsc/3. Windows Group Privileges.md",
+    "Windows/PrivEsc/4. Attacking Windows.md",
+    "Windows/PrivEsc/5. Credential Hunting.md",
+    "Windows/PrivEsc/6.  Additional Techniques.md",
+    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+    "Windows/PrivEsc/1 .Enumeration Commands.md",
+    "Linux/Commands Cheat Sheet.md",
+    "Linux/Linux PrivEsc.md",
+    "Enumeration/Information Gathering/Passive Gathering.md",
+    "Enumeration/Information Gathering/Information Gathering.md",
+    "Enumeration/Information Gathering/Active Gathering.md",
+    "1. Tools/Hashcat_Cheatsheet.md",
+    "1. Tools/Java_Script_DeObfusication.md",
+    "1. Tools/Login_BruteForcing.md",
+    "1. Tools/nmap-cheatsheet.md",
     "1. Tools/SQL MAP.md",
+    "1. Tools/Gobuster Cheat Sheet.md",
+    "1. Tools/BurpSuite.md",
+    "1. Tools/ffuf_cheatsheet.md",
+    "0. Images/ZAPSpidering.png",
+    "0. Images/PenTestingProcess.png",
+    "0. Images/EnumirationParts.png",
+    "0. Images/DNS.png",
+    "Enumeration/2. Footprinting/3. Protocols/DNS Port 53.md",
+    "Enumiration.md",
+    "Enumeration",
+    "Enumeration/2. Footprinting/3. Protocols/IMAP + POP3 Port 110 143 993 995.md",
+    "Enumeration/Information Gathering",
+    "Enumeration/2. Footprinting/3. Protocols/SNMP Port UDP161+2.md",
+    "Enumeration/2. Footprinting/3. Protocols/IPMI Port UDP623.md",
+    "Enumeration/2. Footprinting/3. Protocols/Windows Remote Management protocols.md",
+    "Notes MindMap.canvas",
+    "Enumeration/2. Footprinting/3. Protocols",
+    "Enumeration/2. Footprinting",
     "Linux",
     "Tools/hashcat_markdown.mf.zip",
     "1. Tools",

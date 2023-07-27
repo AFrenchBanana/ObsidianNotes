@@ -15,7 +15,7 @@
 # Deobfuscation Websites
 
 | **Website** |
-| ----------------------------------|
+| -------|
 | [JS Console](https://jsconsole.com) |
 | [Prettier](https://prettier.io/playground/) |
 | [Beautifier](https://beautifier.io/) |

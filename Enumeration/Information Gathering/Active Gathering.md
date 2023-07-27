@@ -93,7 +93,7 @@ ffuf -w Mwordlist> -u http://<ip> -H "HOST: FUZZ.randomtarget.com" -fs 612
 
 List all resources encountered. 
 ### ZAP spidering function 
-![[Pasted image 20230727155034.png]]
+![[ZAPSpidering.png]]
 
 ### FFuF
 ```shell-session

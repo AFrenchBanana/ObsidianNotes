@@ -11,7 +11,7 @@ Types of DNS
 
 Typically encrypted, unless using DNS over TLS(DoT) or DNS over HTTPS (DoH)
 
-![[Pasted image 20230725171835.png]]
+![[DNS.png]]
 
 **DNS Records** 
 

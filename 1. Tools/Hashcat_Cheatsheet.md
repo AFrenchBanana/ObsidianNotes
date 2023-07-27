@@ -1,3 +1,4 @@
+
 | **Command** | **Description** |
 | --------------|-------------------|
 | `pip install hashid` | Install the `hashid` tool |

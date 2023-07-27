@@ -1,4 +1,4 @@
-![[Pasted image 20230727133316.png]]
+![[PenTestingProcess.png]]
 
 |Area|Description|
 |---|---|
