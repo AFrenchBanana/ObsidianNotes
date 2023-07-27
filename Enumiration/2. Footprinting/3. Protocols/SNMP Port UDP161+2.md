@@ -64,7 +64,8 @@ onesixtyone -c /opt/useful/SecLists/Discovery/SNMP/snmp.txt 10.129.14.128
 ```shell-session
 sudo apt install braa
 
-braa <community string>@<IP>:.1.3.6.*  #dont change <ip> here
+braa <community string>@<IP>:.1.
+3.6.*  #dont change <ip> here
 
 braa public@<ip>:.1.3.6.*
 ```
