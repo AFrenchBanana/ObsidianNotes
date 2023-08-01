@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "df00f6b76779d460",
+        "id": "ee37ae7d234eff8f",
         "type": "tabs",
         "children": [
           {
-            "id": "9fb90a5047fda714",
+            "id": "a258bda37cb05b1d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/PrivEsc/1 .Enumeration Commands.md",
+                "file": "Windows/Windows Password Attacks.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/PrivEsc/1 .Enumeration Commands.md",
+                "file": "Windows/Windows Password Attacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/PrivEsc/1 .Enumeration Commands.md",
+                "file": "Windows/Windows Password Attacks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/PrivEsc/1 .Enumeration Commands.md"
+                "file": "Windows/Windows Password Attacks.md"
               }
             }
           }
@@ -146,52 +147,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9fb90a5047fda714",
+  "active": "a258bda37cb05b1d",
   "lastOpenFiles": [
+    "Pasted image 20230801143218.png",
+    "Pasted image 20230801143148.png",
+    "Windows/Windows Commands.md",
+    "Windows/Windows Password Attacks.md",
+    "Password Attacks/Remote Password Attacks.md",
+    "1. Tools/John The Ripper.md",
+    "Password Attacks/How passwords are stored.md",
+    "0. Images/Pasted image 20230801103041.png",
+    "0. Images/Pasted image 20230801104051.png",
+    "Password Attacks",
+    "Shells and Payloads/Payloads.md",
+    "Shells and Payloads/Shell.md",
+    "Enumeration/2. Footprinting/3. Protocols/IMAP + POP3 Port 110 143 993 995.md",
+    "File Transfers/File Transfers With Code.md",
+    "File Transfers/Misc File Transfers.md",
+    "Windows/PrivEsc/4. Attacking Windows.md",
+    "0. Images/Pasted image 20230731115803.png",
+    "0. Images/Pasted image 20230731115747.png",
+    "Shells and Payloads",
+    "File Transfers/Windows Files Transfers.md",
+    "File Transfers/Linux File Transfers.md",
+    "Enumeration/2. Footprinting/3. Protocols/IPMI Port UDP623.md",
+    "Enumeration/2. Footprinting/3. Protocols/SMTP Port 25, 587.md",
+    "1. Tools/SQL MAP.md",
+    "Enumeration/2. Footprinting/3. Protocols/Windows Remote Management protocols.md",
+    "Enumeration/2. Footprinting/3. Protocols/NFS Port-111.md",
+    "File Ts.md",
+    "File Transfers",
+    "Windows/PrivEsc/1 .Enumeration Commands.md",
+    "1. Tools/File Transfers.md",
+    "1. Tools/cheatsheet-24.md",
     "Windows/PrivEsc/2. Windows User Privileges.md",
     "Windows/PrivEsc/3. Windows Group Privileges.md",
-    "Windows/PrivEsc/4. Attacking Windows.md",
     "Windows/PrivEsc/5. Credential Hunting.md",
-    "Windows/PrivEsc/6.  Additional Techniques.md",
-    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
-    "Windows/PrivEsc/1 .Enumeration Commands.md",
-    "Linux/Commands Cheat Sheet.md",
-    "Linux/Linux PrivEsc.md",
-    "Enumeration/Information Gathering/Passive Gathering.md",
-    "Enumeration/Information Gathering/Information Gathering.md",
-    "Enumeration/Information Gathering/Active Gathering.md",
-    "1. Tools/Hashcat_Cheatsheet.md",
-    "1. Tools/Java_Script_DeObfusication.md",
-    "1. Tools/Login_BruteForcing.md",
-    "1. Tools/nmap-cheatsheet.md",
-    "1. Tools/SQL MAP.md",
-    "1. Tools/Gobuster Cheat Sheet.md",
-    "1. Tools/BurpSuite.md",
-    "1. Tools/ffuf_cheatsheet.md",
     "0. Images/ZAPSpidering.png",
     "0. Images/PenTestingProcess.png",
-    "0. Images/EnumirationParts.png",
+    "0. Images/Enumeration Parts.png",
     "0. Images/DNS.png",
-    "Enumeration/2. Footprinting/3. Protocols/DNS Port 53.md",
-    "Enumiration.md",
     "Enumeration",
-    "Enumeration/2. Footprinting/3. Protocols/IMAP + POP3 Port 110 143 993 995.md",
     "Enumeration/Information Gathering",
-    "Enumeration/2. Footprinting/3. Protocols/SNMP Port UDP161+2.md",
-    "Enumeration/2. Footprinting/3. Protocols/IPMI Port UDP623.md",
-    "Enumeration/2. Footprinting/3. Protocols/Windows Remote Management protocols.md",
     "Notes MindMap.canvas",
     "Enumeration/2. Footprinting/3. Protocols",
     "Enumeration/2. Footprinting",
     "Linux",
     "Tools/hashcat_markdown.mf.zip",
     "1. Tools",
-    "EnableSeLoadDriverPrivilige.cpp",
-    "Windows/PrivEsc",
-    "0. Images/SeTakeOwnership Privilige.png",
-    "0. Images/psgetsys script.png",
-    "0. Images/Dump File.png",
-    "0. Images/Windows Authorisation Process.png",
-    "0. Images"
+    "0. Images/SeTakeOwnership Privilige.png"
   ]
 }
