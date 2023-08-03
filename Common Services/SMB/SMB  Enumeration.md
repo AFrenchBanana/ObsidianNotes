@@ -1,3 +1,5 @@
+Port 139,445
+
 Connect to a Share 
 ```shell-session
  smbclient -N -L //<ip>

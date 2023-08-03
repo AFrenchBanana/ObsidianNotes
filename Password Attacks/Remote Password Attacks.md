@@ -95,6 +95,8 @@ cewl https://www.inlanefreight.com -d 4 -m 6 --lowercase -w inlane.wordlist
 ## Password Reuse / Default Passwords
 
 Default Creds
+
+`creds search`
 https://github.com/ihebski/DefaultCreds-cheat-sheet
 
 Router Default Creds
