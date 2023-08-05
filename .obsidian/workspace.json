@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c7dd0e78f3abecc1",
+        "id": "aed73983691a94dc",
         "type": "tabs",
         "children": [
           {
-            "id": "380b740c8f0c5686",
+            "id": "68fcf608c2bb7c7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Common Services/SMB/Attacking SMB.md",
+                "file": "Target Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,8 +48,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "secretsdump",
-                "matchingCase": false,
+                "query": "",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Common Services/SMB/Attacking SMB.md",
+                "file": "Target Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Common Services/SMB/Attacking SMB.md",
+                "file": "Target Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Common Services/SMB/Attacking SMB.md"
+                "file": "Target Notes.md"
               }
             }
           }
@@ -147,14 +147,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "380b740c8f0c5686",
+  "active": "68fcf608c2bb7c7f",
   "lastOpenFiles": [
-    "Target Notes.md",
-    "Common Services/SMB/Attacking SMB.md",
-    "Untitled",
+    "0. Images/Pasted image 20230803132857.png",
+    "Common Services/DNS/DNS Port 53.md",
+    "Common Services/DNS/Attacking DNS.md",
     "Common Services/SMB/Interacting with SMB.md",
+    "Windows/PrivEsc/4. Attacking Windows.md",
+    "Windows/1 .Enumeration Commands.md",
+    "1. Tools/John The Ripper.md",
+    "Common Services/RDP/Attacking RDP.md",
+    "Common Services/MSSQL/Attacking MSSQL.md",
+    "Common Services/RDP",
+    "Common Services/MSSQL/MSSQL Port 1443.md",
+    "Password Attacks/Remote Password Attacks.md",
+    "Common Services/MYSQL/Attacking MYSQL.md",
+    "Common Services/SMB/Attacking SMB.md",
+    "Target Notes.md",
     "Common Services/FTP/Attacking FTP.md",
-    "Pasted image 20230803132857.png",
     "Common Services/SMB/SMB  Enumeration.md",
     "1. Tools/Password Attacks Cheatsheet.md",
     "Target Machine Notes.md",
@@ -162,7 +172,6 @@
     "Z Common Services/Untitled 6",
     "Common Services/NFS",
     "Common Services/Linux Remote Management/Linux Remote Management Protocols.md",
-    "Common Services/MSSQL/MSSQL Port 1443.md",
     "Common Services/Oracel TNS/Oracle TNS Port 1521.md",
     "Common Services/IPMI/IPMI Port UDP623.md",
     "Common Services/Windows Remote Management",
@@ -171,24 +180,14 @@
     "Common Services/SMB",
     "Common Services/Oracel TNS",
     "Common Services/Linux Remote Management",
-    "Common Services/DNS/DNS Port 53.md",
     "Password Attacks/Cracking Files.md",
-    "Password Attacks/Remote Password Attacks.md",
     "Password Attacks/Lateral Movement.md",
     "Windows/Windows Password Attacks.md",
     "Windows/PrivEsc/3. Windows Group Privileges.md",
     "File Transfers/Windows Files Transfers.md",
-    "Windows/PrivEsc/4. Attacking Windows.md",
-    "Windows/PrivEsc/5. Credential Hunting.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
-    "Linux/Credential Hunting.md",
-    "Password Attacks/How passwords are stored.md",
     "Notes MindMap.canvas",
-    "Linux/Commands Cheat Sheet.md",
-    "Linux/Linux PrivEsc.md",
     "0. Images/Pasted image 20230801143148.png",
     "0. Images/Pasted image 20230801143218.png",
-    "Windows/Windows Commands.md",
     "0. Images/Pasted image 20230801103041.png",
     "0. Images/Pasted image 20230801104051.png",
     "0. Images/Pasted image 20230731115803.png",
