@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9211d63dcb9c41a0",
+            "id": "09b21a1016be7e1b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory/Kerberoasting.md",
+                "file": "Active Directory/Access Control List  Abuse.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 282.5,
     "collapsed": true
   },
   "right": {
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Active Directory/Kerberoasting.md",
+                "file": "Active Directory/Access Control List  Abuse.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Active Directory/Kerberoasting.md",
+                "file": "Active Directory/Access Control List  Abuse.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Active Directory/Kerberoasting.md"
+                "file": "Active Directory/Access Control List  Abuse.md"
               }
             }
           },
@@ -157,15 +157,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9211d63dcb9c41a0",
+  "active": "09b21a1016be7e1b",
   "lastOpenFiles": [
-    "Target Notes AD.md",
-    "Active Directory/Initial Access.md",
-    "Active Directory/Finding a Foothold.md",
-    "3. Common Services/SMB/Attacking SMB.md",
     "Active Directory/Kerberoasting.md",
+    "Target Notes AD.md",
+    "Active Directory/Access Control List  Abuse.md",
+    "Active Directory/1. Active Directory Enumiration.md",
+    "Pasted image 20230815202538.png",
+    "Pasted image 20230815201621.png",
+    "Pasted image 20230815201620.png",
+    "Pasted image 20230815201613.png",
+    "Active Directory/3. Initial Access.md",
+    "Active Directory/2. Finding a Foothold.md",
+    "3. Common Services/SMB/Attacking SMB.md",
     "Pasted image 20230814165650.png",
-    "Active Directory/Active Directory Enumiration.md",
     "Windows/PrivEsc/4. Attacking Windows.md",
     "Windows/PrivEsc/3. Windows Group Privileges.md",
     "Windows/PrivEsc/2. Windows User Privileges.md",
@@ -184,8 +189,6 @@
     "2. Footprinting/2. Domain Information.md",
     "2. Footprinting/1. Parts of Enumiration.md",
     "3. Common Services/Windows Remote Management/SNMP Port UDP161+2.md",
-    "3. Common Services/SMTP/SMTP Port 25, 587.md",
-    "3. Common Services/SMTP/Attacking SMTP.md",
     "Notes MindMap.canvas",
     "Active Directory",
     "0. Images/Pasted image 20230809112931.png",
@@ -193,10 +196,7 @@
     "0. Images/Pasted image 20230809114023.png",
     "0. Images/Pasted image 20230809113247.png",
     "0. Images/Pasted image 20230809111733.png",
-    "0. Images/Pasted image 20230808194526.png",
-    "0. Images/Pasted image 20230808193825.png",
     "Pivoting and Port-Forwarding",
-    "0. Images/Pasted image 20230803132857.png",
     "3. Common Services/RDP",
     "Z Common Services/Untitled 7",
     "Z Common Services/Untitled 6",
@@ -204,7 +204,6 @@
     "3. Common Services/Windows Remote Management",
     "3. Common Services/SNMP",
     "3. Common Services/SMTP",
-    "3. Common Services/SMB",
-    "0. Images/Pasted image 20230801143148.png"
+    "3. Common Services/SMB"
   ]
 }
