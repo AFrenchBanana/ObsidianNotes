@@ -32,6 +32,7 @@ x indicated encrypted password is in /etc/shadow
 If empty may be able to login without a password
 ## Windows 
 ![[Pasted image 20230801103041.png]]
+#LSASS #WinLogin #SAM
 Local interactive logon performed between = **WinLogon** , **LoginUI**, **credential provider**, **LSASS**
 **Authorisation Packages**, **SAM/AD** 
 
@@ -72,7 +73,7 @@ Encrypted and stored in:
 ```powershell
 C:\Users\[Username]\AppData\Local\Microsoft\[Vault/Credentials]\
 ```
-
+#NTDS
 #### NTDS
 Logon requests get sent to NTDS.dit on the DC. [Except for Read-Only DCs.](https://learn.microsoft.com/en-us/windows/win32/ad/rodc-and-active-directory-schema)
 

