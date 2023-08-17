@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory/Access Control List  Abuse.md",
+                "file": "Target Notes AD.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "97f91eadb50a8651",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Active Directory/Privileged Access.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "crackmap",
+                "query": "hashcat",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Active Directory/Access Control List  Abuse.md",
+                "file": "Active Directory/Privileged Access.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Active Directory/Access Control List  Abuse.md",
+                "file": "Active Directory/Privileged Access.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Active Directory/Access Control List  Abuse.md"
+                "file": "Active Directory/Privileged Access.md"
               }
             }
           },
@@ -157,45 +170,46 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "09b21a1016be7e1b",
+  "active": "97f91eadb50a8651",
   "lastOpenFiles": [
-    "Active Directory/Kerberoasting.md",
+    "Pasted image 20230817151518.png",
+    "Pasted image 20230817151100.png",
+    "Untitled.md",
+    "Active Directory/Privileged Access.md",
     "Target Notes AD.md",
     "Active Directory/Access Control List  Abuse.md",
-    "Active Directory/1. Active Directory Enumiration.md",
-    "Pasted image 20230815202538.png",
-    "Pasted image 20230815201621.png",
-    "Pasted image 20230815201620.png",
-    "Pasted image 20230815201613.png",
+    "Pasted image 20230817141837.png",
+    "Active Directory/Kerberoasting.md",
     "Active Directory/3. Initial Access.md",
+    "Linux/Credential Hunting.md",
+    "0. Images/Pasted image 20230814165650.png",
+    "0. Images/Pasted image 20230815202538.png",
+    "1. Tools/SQL MAP.md",
+    "Password Attacks/Remote Password Attacks.md",
+    "Windows/PrivEsc/6.  Additional Techniques.md",
+    "Windows/PrivEsc/2. Windows User Privileges.md",
     "Active Directory/2. Finding a Foothold.md",
+    "Active Directory/1. Active Directory Enumiration.md",
+    "0. Images/Pasted image 20230815201621.png",
+    "0. Images/Pasted image 20230815201620.png",
+    "0. Images/Pasted image 20230815201613.png",
     "3. Common Services/SMB/Attacking SMB.md",
-    "Pasted image 20230814165650.png",
     "Windows/PrivEsc/4. Attacking Windows.md",
     "Windows/PrivEsc/3. Windows Group Privileges.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
     "Shells and Payloads/Shell.md",
     "Shells and Payloads/Payloads.md",
     "Pivoting and Port-Forwarding/Tunneling.md",
     "Pivoting and Port-Forwarding/Pivoting around Obstacles.md",
     "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
-    "Password Attacks/Remote Password Attacks.md",
     "Password Attacks/Lateral Movement.md",
     "Password Attacks/How passwords are stored.md",
     "Password Attacks/Cracking Files.md",
     "Linux/Linux PrivEsc.md",
-    "Linux/Credential Hunting.md",
-    "Linux/Commands Cheat Sheet.md",
-    "2. Footprinting/2. Domain Information.md",
-    "2. Footprinting/1. Parts of Enumiration.md",
-    "3. Common Services/Windows Remote Management/SNMP Port UDP161+2.md",
     "Notes MindMap.canvas",
     "Active Directory",
     "0. Images/Pasted image 20230809112931.png",
     "0. Images/Pasted image 20230809122540.png",
     "0. Images/Pasted image 20230809114023.png",
-    "0. Images/Pasted image 20230809113247.png",
-    "0. Images/Pasted image 20230809111733.png",
     "Pivoting and Port-Forwarding",
     "3. Common Services/RDP",
     "Z Common Services/Untitled 7",
