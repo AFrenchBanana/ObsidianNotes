@@ -31,7 +31,7 @@
 x indicated encrypted password is in /etc/shadow
 If empty may be able to login without a password
 ## Windows 
-![[Pasted image 20230801103041.png]]
+![[Windows Auth Process.png]]
 #LSASS #WinLogin #SAM
 Local interactive logon performed between = **WinLogon** , **LoginUI**, **credential provider**, **LSASS**
 **Authorisation Packages**, **SAM/AD** 
@@ -67,7 +67,7 @@ Database file that stores local users passwords.
 SYSKEY (syskey.exe) encrypts hard disk copy to make offline cracking harder.
 
 #### Credential Manager
-![[Pasted image 20230801104051.png]]
+![[LSASS.png]]
 Feature allows users to save credentials used access network resources and websites. 
 Encrypted and stored in:
 ```powershell

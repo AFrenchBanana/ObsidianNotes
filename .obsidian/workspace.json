@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0b60406a3635ae16",
+        "id": "d9aedabfda9f4066",
         "type": "tabs",
         "children": [
           {
-            "id": "09b21a1016be7e1b",
+            "id": "6897eca690008560",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "97f91eadb50a8651",
+            "id": "c067579abcbbf9ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory/Privileged Access.md",
+                "file": "Target Notes AD.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hashcat",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.5,
-    "collapsed": true
+    "width": 282.5
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Active Directory/Privileged Access.md",
+                "file": "Target Notes AD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Active Directory/Privileged Access.md",
+                "file": "Target Notes AD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Active Directory/Privileged Access.md"
+                "file": "Target Notes AD.md"
               }
             }
           },
@@ -170,32 +169,36 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "97f91eadb50a8651",
+  "active": "c067579abcbbf9ca",
   "lastOpenFiles": [
-    "Pasted image 20230817151518.png",
-    "Pasted image 20230817151100.png",
-    "Untitled.md",
-    "Active Directory/Privileged Access.md",
+    "Notes MindMap.canvas",
+    "0. Images/Domain Trust.png",
+    "0. Images/AD Kerberos Preauth.png",
+    "0. Images/Kerberos double hop.png",
+    "0. Images/Bloddhound custom query.png",
+    "0. Images/BloodHound.png",
+    "0. Images/DC Permissons.png",
+    "0. Images/Writeing DACL.png",
+    "0. Images/Security Settingss.png",
+    "0. Images/Security Settings.png",
+    "0. Images/Port Forward.png",
+    "Active Directory/Domain Trust.md",
     "Target Notes AD.md",
+    "Active Directory/Movement across the domain.md",
+    "Untitled.canvas",
+    "Active Directory/1. Active Directory Enumiration.md",
+    "Windows/PrivEsc/3. Windows Group Privileges.md",
+    "Windows/PrivEsc/2. Windows User Privileges.md",
     "Active Directory/Access Control List  Abuse.md",
-    "Pasted image 20230817141837.png",
     "Active Directory/Kerberoasting.md",
     "Active Directory/3. Initial Access.md",
     "Linux/Credential Hunting.md",
-    "0. Images/Pasted image 20230814165650.png",
-    "0. Images/Pasted image 20230815202538.png",
     "1. Tools/SQL MAP.md",
     "Password Attacks/Remote Password Attacks.md",
     "Windows/PrivEsc/6.  Additional Techniques.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
     "Active Directory/2. Finding a Foothold.md",
-    "Active Directory/1. Active Directory Enumiration.md",
-    "0. Images/Pasted image 20230815201621.png",
-    "0. Images/Pasted image 20230815201620.png",
-    "0. Images/Pasted image 20230815201613.png",
     "3. Common Services/SMB/Attacking SMB.md",
     "Windows/PrivEsc/4. Attacking Windows.md",
-    "Windows/PrivEsc/3. Windows Group Privileges.md",
     "Shells and Payloads/Shell.md",
     "Shells and Payloads/Payloads.md",
     "Pivoting and Port-Forwarding/Tunneling.md",
@@ -205,11 +208,7 @@
     "Password Attacks/How passwords are stored.md",
     "Password Attacks/Cracking Files.md",
     "Linux/Linux PrivEsc.md",
-    "Notes MindMap.canvas",
     "Active Directory",
-    "0. Images/Pasted image 20230809112931.png",
-    "0. Images/Pasted image 20230809122540.png",
-    "0. Images/Pasted image 20230809114023.png",
     "Pivoting and Port-Forwarding",
     "3. Common Services/RDP",
     "Z Common Services/Untitled 7",

@@ -12,7 +12,7 @@ hydra -L user.list -P pass.list <ip> ftp
 ```
 
 ### FTP Bounce Attack 
-![[Pasted image 20230803132857.png]]
+![[Proxy.png]]
 Use #FTP server to deliver outbound traffic to another device on the network. 
 
 ```shell

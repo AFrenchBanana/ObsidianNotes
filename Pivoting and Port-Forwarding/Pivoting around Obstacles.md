@@ -4,13 +4,13 @@ Short for PuTTY Link
 Windows command-line SSH tool. 
 Can be used to create dynamic port forwards and SOCKS proxies. 
 Windows did not have SSH client before 2018.
-![[Pasted image 20230809112931.png]]
+![[Pivotting RDP.png]]
 ```cmd
 plink -D 9050 user@target
 ```
 ### Proxifier 
 Can start SOCKS tunnels via SSH.
-![[Pasted image 20230809113247.png]]
+![[Proxifier.png]]
 
 ## SSH #Pivoting with [Sshuttle](https://github.com/sshuttle/sshuttle)
 Removes the need to configure proxychains 
@@ -27,7 +27,7 @@ Creates an iptables to redirect all traffic to target IP
 Can use any tool without proxychains
 ## Web Server Pivoting with [Rpivot](https://github.com/klsecservices/rpivot)
 Reverse SOCKS proxy tool.
-![[Pasted image 20230809114023.png]]
+![[Pivot 3.png]]
 ```shell
 sudo git clone https://github.com/klsecservices/rpivot.git
 ```
@@ -58,7 +58,7 @@ python client.py --server-ip <IPaddressofTargetWebServer> --server-port 8080 --n
 - `Viewing the firewall configuration`
 - `Adding proxies`
 - `Creating port forwarding rules`
-![[Pasted image 20230809122540.png]]
+![[Port Forward.png]]
 ```cmd
 netsh.exe interface portproxy add v4tov4 listenport=8080 listenaddress=<localip on pivot> connectport=3389 connectaddress=<targetIP>
 ```

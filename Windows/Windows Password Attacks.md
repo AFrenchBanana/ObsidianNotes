@@ -39,7 +39,7 @@ sudo hashcat -m 1000 <NT Hashes> /usr/share/wordlists/rockyou.txt
 
 
 ## Attacking LSASS
-![[Pasted image 20230801143148.png]]
+![[WinLogon.png]]
 Upon intial logon LSASS:
 - Cache credentials locally in memory
 - Create [access tokens](https://docs.microsoft.com/en-us/windows/win32/secauthz/access-tokens)
@@ -48,7 +48,7 @@ Upon intial logon LSASS:
 
 #### Dump LSASS 
 ##### Task manager
-![[Pasted image 20230801143218.png]]
+![[LSASS DMP.png]]
 
 Outputs to 
 ```cmd

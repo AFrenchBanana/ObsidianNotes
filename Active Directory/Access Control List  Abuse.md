@@ -6,10 +6,10 @@ The Rules By themselves are called Access Control Entities
 	Defines which security principals are granted or denied access to an object.
 	When a user requests access to an object the system checks for a DACL, without it, the user is given full rights. 
 	If a DACL exists but does not have entries the system will deny access to all users.
-	![[Pasted image 20230815201613.png]]
+	![[DACL settings.png]]
 1. System Access Control List (SACL)
 	Allow administrators to log access attempts made to secured objects. 
-	![[Pasted image 20230815201621.png]]
+	![[Security Settingss.png]]
 #### Access Control Entities 
 |**ACE**|**Description**|
 |---|---|
@@ -35,7 +35,7 @@ Can be viewed with BloodHound and abusable with Power View
 - `AllExtendedRights` abused with `Set-DomainUserPassword` or `Add-DomainGroupMember`
 - `Addself` abused with `Add-DomainGroupMember`
 ### Possible ACE attack methods 
-![[Pasted image 20230815202538.png]]
+![[Writeing DACL.png]]
 ## ACL Enumeration
 ### PowerView
 Very Time consuming:
@@ -151,7 +151,7 @@ Need to have rights to perform domain replication.
 	Replicating Directory Changes and Replicating Directory Changes All permissions set.
 	Domain/Enterprise Admins and default domain administrators have this right by default.
 ### View Rights 
-![[Pasted image 20230817141837.png]]
+![[DC Permissons.png]]
 
 ```powershell
 Get-DomainUser -Identity adunn  |select samaccountname,objectsid,memberof,useraccountcontrol |fl

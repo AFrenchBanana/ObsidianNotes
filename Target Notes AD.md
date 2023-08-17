@@ -10,4 +10,5 @@ svc_vmwaresso = Virtual01
 adunn:SyncMaster757
 proxyagent:CLEARTEXT:Pr0xy_ILFREIGHT!
 syncron:CLEARTEXT:Mycleart3xtP@ss!
+ygroce:Pass@word
 

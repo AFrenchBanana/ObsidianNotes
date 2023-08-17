@@ -1,6 +1,6 @@
 https://www.revshells.com/
 # #Bind Shell
-![[Pasted image 20230731115803.png]]
+![[BindShell.png]]
 Target system has a listener and awaits a connection from the attacker.
 ### Bind Shell with NC 
 ```shell
