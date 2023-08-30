@@ -328,6 +328,13 @@ mv chisel_* chisel && chmod +x ./chisel
 
 sudo ./chisel server --reverse 
 ```
+example:
+```
+chisel server --port 8000 --socks5 --reverse
+
+.\chisel.exe client --max-retry-count 1 10.10.15.23:8000 R:socks
+```
+
 
 Connect to foothold machine 
 ```shell

@@ -85,6 +85,7 @@ run post/multi/gather/ping_sweep RHOSTS=172.16.5.0/23
 ```shell
 use auxiliary/server/socks_proxy
 ```
+
 ```shell
 msf6 auxiliary(server/socks_proxy) > set SRVPORT 9050
 SRVPORT => 9050
