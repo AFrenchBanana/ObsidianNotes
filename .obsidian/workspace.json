@@ -4,59 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "5bdb7a91ed7c1f93",
+        "id": "04fbfd422ee00d41",
         "type": "tabs",
         "children": [
           {
-            "id": "e1c092c52a898411",
+            "id": "08b58144f9a9210e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Password Attacks/Lateral Movement.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "43454f3b6aa30bac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Active Directory/2. Finding a Foothold.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "480647272d5c3d46",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Active Directory/Movement across the domain.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5314f9efd264e415",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows Password Attacks.md",
+                "file": "Web/Web Basics.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "secretsdump",
+                "query": "basic enumeration",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,12 +65,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -123,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/Windows Password Attacks.md",
+                "file": "Web/Web Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/Windows Password Attacks.md",
+                "file": "Web/Web Basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/Windows Password Attacks.md"
+                "file": "Web/Web Basics.md"
               }
             }
           },
@@ -194,46 +157,48 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5314f9efd264e415",
+  "active": "08b58144f9a9210e",
   "lastOpenFiles": [
-    "Active Directory/Movement across the domain.md",
-    "Windows/PrivEsc/3. Windows Group Privileges.md",
-    "Active Directory/Access Control List  Abuse.md",
-    "Active Directory/3. Initial Access.md",
-    "Active Directory/Domain Trust.md",
-    "Target Notes AD.md",
-    "Password Attacks/Lateral Movement.md",
-    "Active Directory/2. Finding a Foothold.md",
-    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
-    "Windows/PrivEsc/9. HTB Cheat Sheet.md",
-    "3. Common Services/MSSQL/Attacking MSSQL.md",
+    "3. Common Services/DNS/Basics of DNS.md",
+    "3. Common Services/DNS/Attacking DNS.md",
+    "Web/Web Basics.md",
     "Notes MindMap.canvas",
-    "Active Directory/Kerberoasting.md",
+    "Linux/Bash Scripting.md",
+    "Note Taking + Report Writing.md",
+    "Target Notes AD.md",
     "Linux/Commands Cheat Sheet.md",
-    "3. Common Services/SMB/Attacking SMB.md",
-    "Active Directory/1. Active Directory Enumiration.md",
-    "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
-    "Windows/Windows Password Attacks.md",
+    "Linux/Basic Enumeration.md",
+    "3. Common Services/SQL/SQLMAP.md",
+    "Linux/Linux Basics.md",
+    "Windows/PowerShell.md",
+    "Windows/Windows Basics.md",
+    "Windows/1 .Enumeration Commands.md",
+    "Web/XSS.md",
+    "Web",
+    "HTB Notes.md",
+    "3. Common Services/SQL/MYSQL/Using MYSQL.md",
+    "Active Directory/3. Initial Access.md",
+    "File Transfers/File Transfers With Code.md",
+    "File Transfers/Linux File Transfers.md",
+    "1. Tools/ffuf_cheatsheet.md",
     "Windows/PrivEsc/6.  Additional Techniques.md",
     "Windows/PrivEsc/5. Credential Hunting.md",
-    "Active Directory/Hardening AD.md",
-    "File Transfers/Windows Files Transfers.md",
-    "File Transfers/Linux File Transfers.md",
-    "Pivoting and Port-Forwarding/Pivoting around Obstacles.md",
+    "3. Common Services/SQL/MYSQL/SQL Injection.md",
+    "0. Images/Pasted image 20230830161241.png",
+    "0. Images/Pasted image 20230830162225.png",
+    "3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
+    "3. Common Services/SQL/MYSQL/MySQL Port 3306.md",
+    "3. Common Services/SQL/What are Databases.md",
+    "0. Images/Pasted image 20230830120528.png",
+    "0. Images/Pasted image 20230830131119.png",
+    "0. Images/Pasted image 20230830131105.png",
+    "3. Common Services/SQL",
     "0. Images/Pasted image 20230819115320.png",
     "0. Images/Pasted image 20230819120814.png",
     "0. Images/Domain Trust.png",
     "0. Images/AD Kerberos Preauth.png",
     "0. Images/Kerberos double hop.png",
-    "0. Images/Bloddhound custom query.png",
-    "0. Images/BloodHound.png",
-    "0. Images/DC Permissons.png",
-    "0. Images/Writeing DACL.png",
-    "0. Images/Security Settingss.png",
     "Untitled.canvas",
-    "Linux/Credential Hunting.md",
-    "1. Tools/SQL MAP.md",
     "Active Directory",
     "Pivoting and Port-Forwarding",
     "3. Common Services/RDP",
@@ -241,8 +206,6 @@
     "Z Common Services/Untitled 6",
     "3. Common Services/NFS",
     "3. Common Services/Windows Remote Management",
-    "3. Common Services/SNMP",
-    "3. Common Services/SMTP",
-    "3. Common Services/SMB"
+    "3. Common Services/SNMP"
   ]
 }
