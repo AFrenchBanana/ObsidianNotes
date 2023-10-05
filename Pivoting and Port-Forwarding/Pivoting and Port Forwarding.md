@@ -110,7 +110,7 @@ may need to add to /etc/proxychains.conf
 socks4 	127.0.0.1 9050
 ```
 #### Creating Routes 
-```shell-session
+```shell
 msf6 > use post/multi/manage/autoroute
 
 msf6 post(multi/manage/autoroute) > set SESSION 1

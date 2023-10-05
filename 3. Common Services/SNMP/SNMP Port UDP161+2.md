@@ -48,20 +48,35 @@ cat /etc/snmp/snmpd.conf | grep -v "#" | sed -r '/^\s*$/d'
 
 # Footprinting
 
-### #snmpwalk
-```shell-session
-snmpwalk -v2c -c public <ip>
+### nmap 
+```bash
+nmap -script "snmp* and not snmp-brute" -p 161 [ip]
 ```
-
+### Enumerate snmp devices 
+```bash 
+snmp-check [ip]
+```
+### #snmpwalk
+```shell
+snmpwalk -V [version] -c [community string] <ip>
+```
+#### IPv6 
+```bash 
+snmp-walk -V [snmp version] -c [community string] [ip] 1.3.6.1.2.1.4.34.1.3
+```
+#### Enumerate all 
+```bash 
+snmpwalk -v [snmp version] -c [community string] [ip] .1
+```
 ### OneSixtyOne
-```shell-session
+```shell
 sudo apt install onesixtyone
 
 onesixtyone -c /opt/useful/SecLists/Discovery/SNMP/snmp.txt 10.129.14.128
 ```
 
 ### Braa 
-```shell-session
+```shell
 sudo apt install braa
 
 braa <community string>@<IP>:.1.

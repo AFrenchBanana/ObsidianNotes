@@ -1,13 +1,17 @@
 ### [Commands](https://www.smartfile.com/blog/the-ultimate-ftp-commands-list/)
 
-|**Commands**|**Description**|
-|---|---|
-|`connect`|Sets the remote host, and optionally the port, for file transfers.|
-|`get`|Transfers a file or set of files from the remote host to the local host.|
-|`put`|Transfers a file or set of files from the local host onto the remote host.|
-|`quit`|Exits tftp.|
-|`status`|Shows the current status of tftp, including the current transfer mode (ascii or binary), connection status, time-out value, and so on.|
-|`verbose`|Turns verbose mode, which displays additional information during file transfer, on or off.|
+| **Commands** | **Description**                                                                                                                        |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `connect`    | Sets the remote host, and optionally the port, for file transfers.                                                                     |
+| `get`        | Transfers a file or set of files from the remote host to the local host.                                                               |
+| `put`        | Transfers a file or set of files from the local host onto the remote host.                                                             |
+| `quit`       | Exits tftp.                                                                                                                            |
+| `status`     | Shows the current status of tftp, including the current transfer mode (ascii or binary), connection status, time-out value, and so on. |
+| `verbose`    | Turns verbose mode, which displays additional information during file transfer, on or off.                                             |
+| `ls -a`      | List all files                                                                                                                         |
+| `binary`     | Set transmission to binary                                                                                                             |
+| `ascii`      | set transmission to ascii                                                                                                              |
+| `bye`|exit                                                                                                                                        |
 
 Clear Text Protocols
 Anonymous login?
@@ -16,10 +20,10 @@ TFTP
 	Simpler, yet does not provide user authentication
 	Uses #UDP
 #vsFTPd
-```shell-session
+```shell
 cat /etc/vsftpd.conf | grep -v "#"
 ```
-```shell-session
+```shell
 cat /etc/ftpusers
 ```
 
@@ -70,7 +74,7 @@ Recursive Listing
 	`ls -R`
 Download all files
 May cause alarm bells?
-```shell-session
+```shell
 wget -m --no-passive ftp://anonymous:anonymous@10.129.14.136
 
 tree . 
@@ -79,14 +83,17 @@ tree .
 
 ### NMAP
 
-```shell-session
+```shell
 sudo nmap -sV -p21 -sC -A 10.129.14.136
 ```
-```shell-session
+```shell
 sudo nmap -sV -p21 -sC -A 10.129.14.136 --script-trace
 ```
+```shell
+nmap --script=ftp-* -p 21 [ip]
+```
 ## Interaction
-```shell-session
+```shell
 nc -nv 10.129.14.136 21
 ```
 ```shell-session

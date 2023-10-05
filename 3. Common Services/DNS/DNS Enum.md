@@ -1,4 +1,5 @@
-Types of #DNS
+Port 53
+# Types of #DNS
 
 |**Server Type**|**Description**|
 |---|---|
@@ -13,7 +14,7 @@ Typically encrypted, unless using DNS over TLS(DoT) or DNS over #HTTPS (DoH)
 
 ![[DNS.png]]
 
-**DNS Records** 
+# DNS Records 
 #Records
 
 |**DNS Record**|**Description**|
@@ -29,26 +30,26 @@ Typically encrypted, unless using DNS over TLS(DoT) or DNS over #HTTPS (DoH)
 
 [**Bind9**]([https://www.isc.org/bind/](https://wiki.debian.org/Bind9))
 
-Common DNS configuration
+# Common DNS configuration
  `named.conf.local`
  `named.conf.options`
  `named.conf.log`
 
-**Local DNS Configuration** 
+### Local DNS Configuration
 ```shell-session
 cat /etc/bind/named.conf.local
 ```
 
-**Zone Files** 
+### Zone Files
 ```shell-session
 /etc/bind/db.domain.com
 ```
-**Reverse Name Resolution**
+### Reverse Name Resolution
 ```shell-session
 /etc/bind/<ip>
 ```
 
-**Dangerous Settings** 
+### Dangerous Settings
 
 |**Option**|**Description**|
 |---|---|
@@ -56,29 +57,76 @@ cat /etc/bind/named.conf.local
 |`allow-recursion`|Defines which hosts are allowed to send recursive requests to the DNS server.|
 |`allow-transfer`|Defines which hosts are allowed to receive zone transfers from the DNS server.|
 |`zone-statistics`|Collects statistical data of zones.|
-
-**DIG**
+# DNS enumeration 
+### Grab DNS details
+```shell
+dig version.bind CHAOS TXT @DNS
+```
+```shell
+nmap --script dns-nsid [ip]
+```
+### Metasploit 
+```msf
+auxiliary/gather/enum_dns
+```
+### DIG
 #DIG
-```shell-session
+Reverse Lookup
+```shell
+dig -x [ip] @[dnsip]
+```
+DNS that resolves that name
+```shell
 dig ns <url> @<ip>
+```
+Information 
+```shell
+dig TXT @[dnsip] [domain]
+```
+Any information
+```
+dig any [dnsip] <ip>
+```
 
-dig CH TXT version.bind <ip>
-
-dig any inlanefreight.htb ip>
-
+```
 dig soa <domain>
 ```
-Zone Transfer check 
-```shell-session
+#### Zone Transfer check 
+```shell
+dnsrecon -d [domain-name] -t axfr
+```
+With domain
+```shell
 dig axfr <domain> @<ip>
 ```
-Zone Transfer Internal
-```shell-session
-dig axfr internal.<domain> @<ip>
+without domain 
+```shell
+dig axfr [dnsip]
 ```
 
-**Subdomain Brute Forcing**
-
+```shell
+fierce --domain [domain] --dns-servers [dnsip]
+```
+#### Zone Transfer Internal
+```shell
+dig axfr internal.<domain> @<ip>
+```
+#### Reverse IP lookup 
+```shell
+dnsrecon -d [domain name] -s
+```
+All addresses
+```
+dnsrecon -r [ip-dns/24] -n [dns-ip]
+```
+## Subdomain Brute Forcing
+#### Locate subdomains 
+```shell
+dnsrecon -D subdomains-1000.txt -d $domain-name -n [ip]
+```
+```shell
+nmap --script dns-srv-enum --script-args "dns-srv-enum.domain='domain.com'"
+```
 
 ```shell-session
 dnsenum --dnsserver <ip> --enum -p 0 -s 0 -o subdomains.txt -f <wordlist> <domain>

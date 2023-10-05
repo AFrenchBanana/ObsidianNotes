@@ -24,7 +24,7 @@ smbmap -H 10.129.14.128 --upload test.txt "notes\test.txt"
 Take advantage of null sessions 
 Enumerate DC?
 [cheat sheet](https://www.willhackforsushi.com/sec504/SMB-Access-from-Linux.pdf)
-```shell-session
+```shell
 rpcclient -U'%' 10.10.110.17
 ```
 

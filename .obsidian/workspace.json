@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "04fbfd422ee00d41",
+        "id": "137fa0e79ad007b8",
         "type": "tabs",
         "children": [
           {
-            "id": "08b58144f9a9210e",
+            "id": "8c164a84ad1fa498",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Web Basics.md",
+                "file": "Active Directory/Domain Trust.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "basic enumeration",
+                "query": "gobuster dns",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5,
-    "collapsed": true
+    "width": 303.5
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web/Web Basics.md",
+                "file": "Active Directory/Domain Trust.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web/Web Basics.md",
+                "file": "Active Directory/Domain Trust.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web/Web Basics.md"
+                "file": "Active Directory/Domain Trust.md"
               }
             }
           },
@@ -136,6 +135,16 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
+            }
+          },
+          {
+            "id": "f5bcd3b64b159059",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
             }
           }
         ],
@@ -157,38 +166,46 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "08b58144f9a9210e",
+  "active": "8c164a84ad1fa498",
   "lastOpenFiles": [
-    "3. Common Services/DNS/Basics of DNS.md",
-    "3. Common Services/DNS/Attacking DNS.md",
-    "Web/Web Basics.md",
-    "Notes MindMap.canvas",
-    "Linux/Bash Scripting.md",
-    "Note Taking + Report Writing.md",
-    "Target Notes AD.md",
-    "Linux/Commands Cheat Sheet.md",
-    "Linux/Basic Enumeration.md",
-    "3. Common Services/SQL/SQLMAP.md",
-    "Linux/Linux Basics.md",
-    "Windows/PowerShell.md",
-    "Windows/Windows Basics.md",
-    "Windows/1 .Enumeration Commands.md",
-    "Web/XSS.md",
-    "Web",
-    "HTB Notes.md",
-    "3. Common Services/SQL/MYSQL/Using MYSQL.md",
     "Active Directory/3. Initial Access.md",
-    "File Transfers/File Transfers With Code.md",
+    "3. Common Services/SMB/SMB  Enumeration.md",
+    "File Transfers/Misc File Transfers.md",
+    "Windows/1 .Enumeration Commands.md",
+    "Web/XXE.md",
+    "Web/File Inclusion.md",
+    "File Transfers/Windows Files Transfers.md",
     "File Transfers/Linux File Transfers.md",
+    "File Transfers/File Transfers With Code.md",
+    "Web/XSS.md",
+    "document.write(\"<h3>Please login to continue</h3.md",
+    "document.write(\"<h3>Please login to continue<",
+    "Shells and Payloads/Shell.md",
+    "File Upload/File Upload Basics.md",
+    "3. Common Services/DNS/Basics of DNS.md",
+    "3. Common Services/IMAP + POP3/IMAP + POP3 Port 110 143 993 995.md",
+    "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
+    "3. Common Services/SMB/Interacting with SMB.md",
+    "Windows/PrivEsc/4. Attacking Windows.md",
+    "Windows/PrivEsc/2. Windows User Privileges.md",
+    "3. Common Services/SQL/SQLMAP.md",
+    "1. Tools/SQL MAP.md",
+    "3. Common Services/SQL/SQL Injection.md",
+    "3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
+    "2. Footprinting/Information Gathering/Active Gathering.md",
+    "1. Tools/Gobuster Cheat Sheet.md",
     "1. Tools/ffuf_cheatsheet.md",
-    "Windows/PrivEsc/6.  Additional Techniques.md",
-    "Windows/PrivEsc/5. Credential Hunting.md",
-    "3. Common Services/SQL/MYSQL/SQL Injection.md",
+    "Notes MindMap.canvas",
+    "Untitled.canvas",
+    "File Upload",
+    "3. Common Services/LDAP",
+    "3. Common Services/NTP",
+    "3. Common Services/SNMP",
+    "3. Common Services/SSH",
+    "3. Common Services/NetBIOS",
+    "Web",
     "0. Images/Pasted image 20230830161241.png",
     "0. Images/Pasted image 20230830162225.png",
-    "3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
-    "3. Common Services/SQL/MYSQL/MySQL Port 3306.md",
-    "3. Common Services/SQL/What are Databases.md",
     "0. Images/Pasted image 20230830120528.png",
     "0. Images/Pasted image 20230830131119.png",
     "0. Images/Pasted image 20230830131105.png",
@@ -198,14 +215,6 @@
     "0. Images/Domain Trust.png",
     "0. Images/AD Kerberos Preauth.png",
     "0. Images/Kerberos double hop.png",
-    "Untitled.canvas",
-    "Active Directory",
-    "Pivoting and Port-Forwarding",
-    "3. Common Services/RDP",
-    "Z Common Services/Untitled 7",
-    "Z Common Services/Untitled 6",
-    "3. Common Services/NFS",
-    "3. Common Services/Windows Remote Management",
-    "3. Common Services/SNMP"
+    "Active Directory"
   ]
 }

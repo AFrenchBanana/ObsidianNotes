@@ -20,7 +20,7 @@ Extended SMTP (ESMTP) with SMTP-Auth
 		[DomainKeys](https://dkim.org/) and [SenderPolicyFramework](https://dmarcian.com/what-is-spf/)
 
 **Default Configuration** 
-```shell-session
+```shell
 cat /etc/postfix/main.cf | grep -v "#" | sed -r "/^\s*$/d"
 ```
 
@@ -43,13 +43,13 @@ cat /etc/postfix/main.cf | grep -v "#" | sed -r "/^\s*$/d"
 
 #Telnet
 HELO/EHLO
-```shell-session
+```shell
 telnet <ip> 25
 ```
 VRFY 
 Existing Users
 252 - User does not exist
-```shell-session
+```shell
 telnet <ip> 25
 ```
 
@@ -57,11 +57,30 @@ telnet <ip> 25
 **Dangerous Settings** 
 
 Open Relay Configuration 
-```shell-session
+```shell
 mynetworks = 0.0.0.0/0
 ```
-
-#nmap
-```shell-session
+### Enumeration commands
+#### #nmap
+```shell
 sudo nmap <ip> -p25 --script smtp-open-relay -v
+```
+```shell
+nmap -p 25 --script smtp-enum-users [ip]
+```
+#### Banner grab 
+```shell
+nc -vn [ip] 25
+```
+#### Find mail server 
+```shell
+dig +short mx [domain]
+```
+#### User enum 
+```shell
+smtp-user-enum -M <mode> -u [user] -t [ip]
+```
+#### Metasploit 
+```shell
+auxiliary/scanner/smtp/smtp_enum
 ```

@@ -50,7 +50,7 @@ Use SQL conditional statements to control whether the page returns the output.
 SQL conditional statements that delay the page response if its true. 
 ###### Out of Band
 May not have direct access to the output, so may need to direct to a remote location, 
-# SQL Injection Fundermentals
+# SQL Injection Fundamentals
 ## Subverting Query Logic 
 #### Authentication Bypass
 Example Login statement:
@@ -182,6 +182,9 @@ List columns in table named `credentials`
 ##### Data 
 ```sql
 cn' UNION select 1, username, password, 4,5 from backup.admin_bk-- 
+```
+```sql
+cn' UNION select group_concat(value1,0x2b,value2) from backup.admin_bk-- 
 ```
 ### Reading Files
 Must have the `FILE` privilige

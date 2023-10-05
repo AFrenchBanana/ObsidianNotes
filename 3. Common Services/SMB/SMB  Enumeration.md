@@ -1,13 +1,25 @@
 Port 139,445
 
-Connect to a #Share 
-```shell-session
- smbclient -N -L //<ip>
+#### nmap commands 
+```shell
+sudo nmap <ip> -sV -sC -p139,445
 ```
-```shell-session
-smbclient //<ip>/share
+Determines OS, computer name, domain and workgroup
+```shell
+nmap --script smb-os-discovery --open -p 139 [ip]
 ```
-
+Output to XML
+```shell
+nmap --script smb-os-discovery --open -p 139 [ip] -oX smb.xml
+```
+Enumerate Shares
+```shell
+nmap --script smb-enum-shares -p 139 [ip]
+```
+Check SMB vulnerabilities
+```shell
+nmap -p 139,445 -vv -Pn --script=smb-vuln* [IP]
+```
 
 Access rights designed as Access Control Lists (ACL)
 #Samba
@@ -59,23 +71,41 @@ cat /etc/samba/smb.conf | grep -v "#\|\;"
 |`logon script = script.sh`|What script needs to be executed on the user's login?|
 |`magic script = script.sh`|Which script should be executed when the script gets closed?|
 |`magic output = script.out`|Where the output of the magic script needs to be stored?|
-
-Restart Samba
-```shell-session
+### Commands
+#### Restart Samba
+```shell
 sudo systemctl restart smbd
 ```
-
-Samba Status 
-```shell-session
+#### Samba Status 
+```shell
 smbstatus
 ```
 
-nmap 
-```shell-session
-sudo nmap <ip> -sV -sC -p139,445
-```
 
-RPCClient 
+#### Connect to a #Share 
+list shares
+```shell
+ smbclient -N -L //<ip>
+```
+Connect to share
+```shell
+smbclient //<ip>/share
+```
+Recursive get 
+```shell
+smbget -a smb://[ip]/[file] -R
+```
+Upload a file 
+```shell
+smbmap -H [ip] --upload [file] [share]
+```
+List shares as Guest 
+```shell
+smbmap -H [ip] -u Guest -R
+```
+List Shares 
+
+#### RPCClient 
 ```shell-session
 rpcclient -U "" <ip>
 ```

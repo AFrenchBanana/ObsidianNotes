@@ -1,3 +1,15 @@
+## SearchSploit
+
+| Optional Flag   | Description                                            |
+| --------------- | ------------------------------------------------------ |
+| `-c`            | Performs a case sensitive search                       |
+| `-e`            | Performs a search for exact matches                    |
+| `-t`            | Search only for an exploit title                       |
+| `-x`            | Examine a specific exploit in detail, Use number after |
+| `--exclude=' '` | Exclude terms from search results                      |
+| `-m`            | copy exploit to cwd                                    |
+
+
 ## One-Liners
 Netcat
 ```shell
