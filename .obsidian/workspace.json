@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "137fa0e79ad007b8",
+        "id": "df75a4f1be9ff16d",
         "type": "tabs",
         "children": [
           {
-            "id": "8c164a84ad1fa498",
+            "id": "9c29211479952319",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Active Directory/Domain Trust.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Active Directory/Domain Trust.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Active Directory/Domain Trust.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Active Directory/Domain Trust.md"
-              }
+              "state": {}
             }
           },
           {
@@ -166,13 +158,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8c164a84ad1fa498",
+  "active": "9c29211479952319",
   "lastOpenFiles": [
+    "3. Common Services/SQL/SQL Injection.md",
+    "3. Common Services/SQL/SQLMAP.md",
+    "Web/XXE.md",
+    "Web/Insecure Direct Object References (IDOR).md",
+    "Web/HTTP Verb Tampering.md",
+    "File Upload/File Upload Basics.md",
+    "Web/Web Basics.md",
+    "Web/Burp Suite.md",
     "Active Directory/3. Initial Access.md",
+    "Web/Cross Site & Server Side Request Forgery.md",
+    "Web/Directory Enumeration.md",
+    "HTB Notes.md",
+    "Active Directory/Domain Trust.md",
     "3. Common Services/SMB/SMB  Enumeration.md",
     "File Transfers/Misc File Transfers.md",
     "Windows/1 .Enumeration Commands.md",
-    "Web/XXE.md",
     "Web/File Inclusion.md",
     "File Transfers/Windows Files Transfers.md",
     "File Transfers/Linux File Transfers.md",
@@ -181,20 +184,9 @@
     "document.write(\"<h3>Please login to continue</h3.md",
     "document.write(\"<h3>Please login to continue<",
     "Shells and Payloads/Shell.md",
-    "File Upload/File Upload Basics.md",
     "3. Common Services/DNS/Basics of DNS.md",
     "3. Common Services/IMAP + POP3/IMAP + POP3 Port 110 143 993 995.md",
     "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
-    "3. Common Services/SMB/Interacting with SMB.md",
-    "Windows/PrivEsc/4. Attacking Windows.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
-    "3. Common Services/SQL/SQLMAP.md",
-    "1. Tools/SQL MAP.md",
-    "3. Common Services/SQL/SQL Injection.md",
-    "3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
-    "2. Footprinting/Information Gathering/Active Gathering.md",
-    "1. Tools/Gobuster Cheat Sheet.md",
-    "1. Tools/ffuf_cheatsheet.md",
     "Notes MindMap.canvas",
     "Untitled.canvas",
     "File Upload",
