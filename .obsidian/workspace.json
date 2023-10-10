@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "df75a4f1be9ff16d",
+        "id": "a5714dd59b7e715b",
         "type": "tabs",
         "children": [
           {
-            "id": "9c29211479952319",
+            "id": "4f8285dcc9294f60",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "HTTP Request Smuggling.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gobuster dns",
+                "query": "SSRF",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "HTTP Request Smuggling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "HTTP Request Smuggling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "HTTP Request Smuggling.md"
+              }
             }
           },
           {
@@ -158,35 +166,36 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9c29211479952319",
+  "active": "4f8285dcc9294f60",
   "lastOpenFiles": [
-    "3. Common Services/SQL/SQL Injection.md",
-    "3. Common Services/SQL/SQLMAP.md",
-    "Web/XXE.md",
-    "Web/Insecure Direct Object References (IDOR).md",
-    "Web/HTTP Verb Tampering.md",
-    "File Upload/File Upload Basics.md",
-    "Web/Web Basics.md",
-    "Web/Burp Suite.md",
-    "Active Directory/3. Initial Access.md",
+    "Command Injections/Command Injections.md",
+    "HTTP Request Smuggling.md",
     "Web/Cross Site & Server Side Request Forgery.md",
-    "Web/Directory Enumeration.md",
-    "HTB Notes.md",
-    "Active Directory/Domain Trust.md",
+    "3. Common Services/RDP/Attacking RDP.md",
+    "Command Injections",
     "3. Common Services/SMB/SMB  Enumeration.md",
-    "File Transfers/Misc File Transfers.md",
-    "Windows/1 .Enumeration Commands.md",
-    "Web/File Inclusion.md",
-    "File Transfers/Windows Files Transfers.md",
+    "3. Common Services/SMB/Interacting with SMB.md",
+    "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
+    "Shells and Payloads/Shell.md",
+    "Linux/Linux PrivEsc.md",
+    "HTB Notes.md",
     "File Transfers/Linux File Transfers.md",
     "File Transfers/File Transfers With Code.md",
+    "Web/Insecure Direct Object References (IDOR).md",
+    "Web/Web Basics.md",
+    "Web/XXE.md",
     "Web/XSS.md",
-    "document.write(\"<h3>Please login to continue</h3.md",
+    "Web/File Inclusion.md",
+    "Web/HTTP Verb Tampering.md",
+    "File Upload/File Upload Basics.md",
+    "Active Directory/3. Initial Access.md",
+    "Windows/PrivEsc/5. Credential Hunting.md",
+    "File Transfers/Windows Files Transfers.md",
+    "Windows/Windows Password Attacks.md",
+    "3. Common Services/SQL/MSSQL/Attacking MSSQL.md",
+    "3. Common Services/SQL/MSSQL/MSSQL Port 1443.md",
+    "3. Common Services/SQL/SQL Injection.md",
     "document.write(\"<h3>Please login to continue<",
-    "Shells and Payloads/Shell.md",
-    "3. Common Services/DNS/Basics of DNS.md",
-    "3. Common Services/IMAP + POP3/IMAP + POP3 Port 110 143 993 995.md",
-    "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
     "Notes MindMap.canvas",
     "Untitled.canvas",
     "File Upload",
@@ -206,7 +215,6 @@
     "0. Images/Pasted image 20230819120814.png",
     "0. Images/Domain Trust.png",
     "0. Images/AD Kerberos Preauth.png",
-    "0. Images/Kerberos double hop.png",
-    "Active Directory"
+    "0. Images/Kerberos double hop.png"
   ]
 }

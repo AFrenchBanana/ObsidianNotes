@@ -4,8 +4,8 @@
 
 <!-- # Linux Privilege Escalation 🦁 -->
 
-&nbsp;
-
+# CVES
+https://github.com/0xsyr0/Awesome-Cybersecurity-Handbooks/blob/main/handbooks/cve.md#CVE-2023-32629-CVE-2023-2640-GameOverlay-Ubuntu-Kernel-Exploit-LPE-0-day
 ## 📜 Overview
 1 [Escalating via Kernel Exploits](https://github.com/sujayadkesar/Linux-Privilege-Escalation#1-escalation-by-kernel-exploits)<br>
 2 [Escalation  by File permission & Passwords](https://github.com/sujayadkesar/Linux-Privilege-Escalation#2-escalation-via-file-permission-and-passwords-)<br>
