@@ -16,7 +16,7 @@
 		{"type":"text","text":"## Cheat Sheets ##","id":"b145c9e5927ad6f0","x":1415,"y":-584,"width":250,"height":60,"color":"5"},
 		{"type":"file","file":"Windows/PrivEsc/Legacy Operating Systems.md","id":"0893b7067e3a1d3f","x":2640,"y":-1028,"width":400,"height":474,"color":"5"},
 		{"type":"text","text":"# Linux\n","id":"f8beeacdca33ab64","x":-2280,"y":-395,"width":360,"height":80,"color":"2"},
-		{"type":"file","file":"Linux/Linux PrivEsc.md","id":"b3b31ff1a64f5190","x":-1800,"y":-240,"width":720,"height":1200,"color":"2"},
+		{"type":"file","file":"Linux/PrivEsc/zLinux PrivEsc Mega.md","id":"b3b31ff1a64f5190","x":-1800,"y":-240,"width":720,"height":1200,"color":"2"},
 		{"type":"file","file":"Windows/1 .Enumeration Commands.md","id":"6d7e8a6f94794b57","x":560,"y":-220,"width":400,"height":1160,"color":"5"},
 		{"type":"file","file":"Linux/Commands Cheat Sheet.md","id":"e7a6076ebd43a8e7","x":-2300,"y":-1440,"width":400,"height":800,"color":"2"},
 		{"type":"file","file":"Windows/PrivEsc/5. Credential Hunting.md","id":"56f5778c6f19443f","x":2640,"y":-198,"width":400,"height":678,"color":"5"},

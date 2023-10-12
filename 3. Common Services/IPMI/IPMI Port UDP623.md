@@ -31,12 +31,12 @@ Many have a web based management console
 
 # Footprinting 
 ### Nmap
-```shell-session
+```shell
 sudo nmap -sU --script ipmi-version -p 623 ilo.inlanfreight.local
 ```
 
 ### Metasploit 
-```shell-session
+```shell
 msf6 > use auxiliary/scanner/ipmi/ipmi_version 
 msf6 auxiliary(scanner/ipmi/ipmi_version) > set rhosts 10.129.42.195
 msf6 auxiliary(scanner/ipmi/ipmi_version) > show options 
@@ -57,7 +57,7 @@ msf6 auxiliary(scanner/ipmi/ipmi_version) > run
 http://fish2.com/ipmi/remote-pw-cracking.html
 
 Crack with hashcat 
-```shell-session 
+```shell
 hashcat -m 7300 ipmi.txt -a 3 ?1?1?1?1?1?1?1?1 -1 ?d?u
 ```
 

@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "1a7940153dedb739",
+        "id": "e42e39c19ddb026c",
         "type": "tabs",
         "children": [
           {
-            "id": "b0bba25a7dcc9074",
+            "id": "0074c1aac43707d3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/PrivEsc/1. Information Gathering.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e9cac5801b155c5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/PrivEsc/1. Information Gathering.md",
+                "file": "Linux/Persistence and Cleaning up.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/PrivEsc/1. Information Gathering.md",
+                "file": "Linux/Persistence and Cleaning up.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/PrivEsc/1. Information Gathering.md",
+                "file": "Linux/Persistence and Cleaning up.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/PrivEsc/1. Information Gathering.md"
+                "file": "Linux/Persistence and Cleaning up.md"
               }
             }
           },
@@ -179,36 +166,36 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e9cac5801b155c5b",
+  "active": "0074c1aac43707d3",
   "lastOpenFiles": [
-    "Linux/Credential Hunting.md",
-    "Linux/PrivEsc/1. Information Gathering.md",
-    "Linux/Linux PrivEsc.md",
-    "Linux/PrivEsc/1. Basic Enumeration.md",
-    "Linux/PrivEsc/Service-Based Privilege Escalation.md",
-    "Linux/PrivEsc/Permission-based Priv Esc.md",
-    "Linux/PrivEsc/Environment-based Priv-Esc.md",
-    "Web/HTTP Request Smuggling.md",
-    "Linux/PrivEsc",
-    "3. Common Services/SQL/SQL Injection.md",
     "Linux/Bash Scripting.md",
     "Linux/Commands Cheat Sheet.md",
-    "Command Injections/Command Injections.md",
-    "Web/Cross Site & Server Side Request Forgery.md",
-    "3. Common Services/RDP/Attacking RDP.md",
-    "Command Injections",
-    "3. Common Services/SMB/SMB  Enumeration.md",
-    "3. Common Services/SMB/Interacting with SMB.md",
-    "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
-    "Shells and Payloads/Shell.md",
-    "HTB Notes.md",
-    "File Transfers/Linux File Transfers.md",
-    "File Transfers/File Transfers With Code.md",
-    "Web/Insecure Direct Object References (IDOR).md",
-    "Web/Web Basics.md",
+    "Linux/Persistence and Cleaning up.md",
+    "Linux/PrivEsc/Service-Based Privilege Escalation.md",
+    "Linux/PrivEsc/zLinux PrivEsc Mega.md",
+    "Linux/PrivEsc/Recent Zero Days.md",
+    "Linux/PrivEsc/Untitled.md",
     "Web/XXE.md",
+    "3. Common Services/IPMI/IPMI Port UDP623.md",
+    "3. Common Services/FTP/Attacking FTP.md",
+    "3. Common Services/DNS/DNS Enum.md",
+    "3. Common Services/DNS/Basics of DNS.md",
+    "3. Common Services/DNS/Attacking DNS.md",
+    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+    "Windows/PrivEsc/6.  Additional Techniques.md",
+    "Windows/PrivEsc/9. HTB Cheat Sheet.md",
+    "Windows/PrivEsc/5. Credential Hunting.md",
+    "Windows/PrivEsc/4. Attacking Windows.md",
+    "Windows/PrivEsc/3. Windows Group Privileges.md",
+    "Windows/PrivEsc/2. Windows User Privileges.md",
+    "HTB Notes.md",
     "Web/XSS.md",
-    "Web/File Inclusion.md",
+    "Linux/PrivEsc/Linux Internals Priv Esc.md",
+    "3. Common Services/NFS/NFS Port-111.md",
+    "Shells and Payloads/Shell.md",
+    "Linux/PrivEsc/1. Information Gathering.md",
+    "Linux/PrivEsc",
+    "Command Injections",
     "document.write(\"<h3>Please login to continue<",
     "Notes MindMap.canvas",
     "Untitled.canvas",
