@@ -78,7 +78,6 @@ May cause alarm bells?
 wget -m --no-passive ftp://anonymous:anonymous@10.129.14.136
 
 tree . 
-
 ```
 
 ### NMAP
@@ -96,9 +95,9 @@ nmap --script=ftp-* -p 21 [ip]
 ```shell
 nc -nv 10.129.14.136 21
 ```
-```shell-session
+```shell
 telnet 10.129.14.136 21
 ```
-```shell-session
+```shell
 openssl s_client -connect 10.129.14.136:21 -starttls ftp
 ```

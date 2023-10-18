@@ -37,7 +37,7 @@ Access rights designed as Access Control Lists (ACL)
 |SMB 3.1.1|Windows 10, Windows Server 2016|Integrity checking, AES-128 encryption|
 
 Default configuration
-```shell-session
+```shell
 cat /etc/samba/smb.conf | grep -v "#\|\;" 
 ```
 
@@ -106,7 +106,7 @@ smbmap -H [ip] -u Guest -R
 List Shares 
 
 #### RPCClient 
-```shell-session
+```shell
 rpcclient -U "" <ip>
 ```
 
@@ -121,24 +121,24 @@ rpcclient -U "" <ip>
 |`queryuser <RID>`|Provides information about a specific user.|
 
 Brute Force RID
-```shell-session
+```shell
 for i in $(seq 500 1100);do rpcclient -N -U "" <ip> -c "queryuser 0x$(printf '%x\n' $i)" | grep "User Name\|user_rid\|group_rid" && echo "";done
 ```
-```shell-session
-impacket-samrdump.py <ip>
+```shell
+impacket-samrdump <ip>
 ```
 
 #SMBmap
-```shell-session
+```shell
 smbmap -H <ip>
 ```
 
 #CrackMapExec
-```shell-session
+```shell
 crackmapexec smb <ip> --shares -u '' -p ''
 ```
 
 [Enum4Linux-ng](https://github.com/cddmp/enum4linux-ng)
-```shell-session
+```shell
 ./enum4linux-ng.py <ip> -A
 ```

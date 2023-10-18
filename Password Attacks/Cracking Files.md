@@ -1,5 +1,7 @@
 ## Protected Files 
 
+hashcat --example-hashes | grep <start_of_hash> -B 12
+
 ### Hunting for  encoded Files.
 
 ```shell

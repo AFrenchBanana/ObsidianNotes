@@ -4,22 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "e42e39c19ddb026c",
+        "id": "96f5fd6294f60c18",
         "type": "tabs",
         "children": [
           {
-            "id": "0074c1aac43707d3",
+            "id": "b008050f959af915",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Persistence and Cleaning up.md",
+                "file": "Common Applications/Servlet Containers & Software Development/Jenkins.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c07d37e9416a5c6f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "2c4a331bf0496a3f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Common Applications/Infrastructure & Network Monitoring Tools/Splunk.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -48,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SSRF",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -85,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Persistence and Cleaning up.md",
+                "file": "Common Applications/Infrastructure & Network Monitoring Tools/Splunk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/Persistence and Cleaning up.md",
+                "file": "Common Applications/Infrastructure & Network Monitoring Tools/Splunk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Persistence and Cleaning up.md"
+                "file": "Common Applications/Infrastructure & Network Monitoring Tools/Splunk.md"
               }
             }
           },
@@ -147,8 +169,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -166,46 +187,46 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0074c1aac43707d3",
+  "active": "2c4a331bf0496a3f",
   "lastOpenFiles": [
-    "Linux/Bash Scripting.md",
-    "Linux/Commands Cheat Sheet.md",
-    "Linux/Persistence and Cleaning up.md",
-    "Linux/PrivEsc/Service-Based Privilege Escalation.md",
-    "Linux/PrivEsc/zLinux PrivEsc Mega.md",
-    "Linux/PrivEsc/Recent Zero Days.md",
-    "Linux/PrivEsc/Untitled.md",
-    "Web/XXE.md",
-    "3. Common Services/IPMI/IPMI Port UDP623.md",
-    "3. Common Services/FTP/Attacking FTP.md",
-    "3. Common Services/DNS/DNS Enum.md",
-    "3. Common Services/DNS/Basics of DNS.md",
-    "3. Common Services/DNS/Attacking DNS.md",
-    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
-    "Windows/PrivEsc/6.  Additional Techniques.md",
-    "Windows/PrivEsc/9. HTB Cheat Sheet.md",
-    "Windows/PrivEsc/5. Credential Hunting.md",
-    "Windows/PrivEsc/4. Attacking Windows.md",
-    "Windows/PrivEsc/3. Windows Group Privileges.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
-    "HTB Notes.md",
-    "Web/XSS.md",
-    "Linux/PrivEsc/Linux Internals Priv Esc.md",
-    "3. Common Services/NFS/NFS Port-111.md",
+    "Common Applications/Infrastructure & Network Monitoring Tools/Splunk.md",
+    "Common Applications/Servlet Containers & Software Development/Jenkins.md",
     "Shells and Payloads/Shell.md",
-    "Linux/PrivEsc/1. Information Gathering.md",
-    "Linux/PrivEsc",
-    "Command Injections",
-    "document.write(\"<h3>Please login to continue<",
+    "Common Applications/Servlet Containers & Software Development/Tomcat.md",
+    "Common Applications/Content Management Systems/Drupal.md",
+    "Common Applications/Content Management Systems/Joomla.md",
+    "Common Applications/Content Management Systems/WordPress.md",
+    "Common Applications/Application Discovery & Enumeration.md",
+    "Common Applications/Miscellaneous Applications",
+    "Common Applications/Thick Client Applications",
+    "Common Applications/Common Gateway Interfacces",
+    "Common Applications/Custom Service Mgmt & Configuration Mangement",
+    "Common Applications/Infrastructure & Network Monitoring Tools",
+    "Common Applications/Servlet Containers & Software Development",
+    "Common Applications/Content Management Systems/Untitled",
+    "Common Applications/Content Management Systems",
+    "Common Applications",
+    "3. Common Services/SMB/Attacking SMB.md",
+    "3. Common Services/SMB/Interacting with SMB.md",
+    "3. Common Services/SMB/SMB  Enumeration.md",
+    "3. Common Services/IMAP + POP3/Email Attack.md",
+    "Active Directory/2. Finding a Foothold.md",
+    "Active Directory/1. Active Directory Enumiration.md",
+    "Active Directory/3. Initial Access.md",
+    "Password Attacks/Lateral Movement.md",
+    "Active Directory/Domain Trust.md",
+    "Windows/Windows Password Attacks.md",
+    "Windows/PrivEsc/4. Attacking Windows.md",
+    "Active Directory/Movement across the domain.md",
+    "HTB Notes.md",
+    "Windows/Persistence and Logs.md",
+    "Command Injections/Command Injections.md",
+    "3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
+    "3. Common Services/SQL/MYSQL/Using MYSQL.md",
+    "3. Common Services/SQL/MYSQL/MySQL Port 3306.md",
+    "Post Exploitation",
     "Notes MindMap.canvas",
     "Untitled.canvas",
-    "File Upload",
-    "3. Common Services/LDAP",
-    "3. Common Services/NTP",
-    "3. Common Services/SNMP",
-    "3. Common Services/SSH",
-    "3. Common Services/NetBIOS",
-    "Web",
     "0. Images/Pasted image 20230830161241.png",
     "0. Images/Pasted image 20230830162225.png",
     "0. Images/Pasted image 20230830120528.png",
