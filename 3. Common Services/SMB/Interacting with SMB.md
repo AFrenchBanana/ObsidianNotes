@@ -82,7 +82,7 @@ sudo mkdir <file path>
 ```
 
 ```shell
- sudo mount -t cifs -o username=plaintext,password=Password123,domain=. //192.168.220.129/Finance <directory>
+sudo mount -t cifs -o username=plaintext,password=Password123,domain=. //192.168.220.129/Finance <directory>
 ```
 
 Alternative with a cred file 

@@ -79,7 +79,7 @@ Fuzz on Burp
 	- `.`
 	- `…`
 	- `:`
-	- `shell.php%00.jpg`
+		- `shell.php%00.jpg`
 - Bash script to generate all examples:
 ```bash
 for char in '%20' '%0a' '%00' '%0d0a' '/' '.\\' '.' '…' ':'; do
