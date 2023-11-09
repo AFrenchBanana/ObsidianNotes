@@ -85,7 +85,7 @@ dig TXT @[dnsip] [domain]
 ```
 Any information
 ```
-dig any [dnsip] <ip>
+dig any @[dnsip] <ip>
 ```
 
 ```

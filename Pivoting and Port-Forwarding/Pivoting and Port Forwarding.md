@@ -137,7 +137,7 @@ meterpreter > portfwd add -l 3300 -p 3389 -r 172.16.5.19
 ```
 
 ```shell
-xfreerdp /v:localhost:3300 /u:victor /p:pass@123
+xfreerdp /v:localhost:3300 /u:victor /p:pass@123 /scale-desktop:200 /scale:180
 ```
 ### Reverse Port Forwarding 
 ```shell

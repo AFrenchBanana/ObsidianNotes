@@ -87,7 +87,7 @@ socks5 127.0.0.1 1080
 ```
 #### Usage example 
 ```shell-session
-proxychains xfreerdp /v:172.16.5.19 /u:victor /p:pass@123
+proxychains xfreerdp /v:172.16.5.19 /u:victor /p:pass@123 /scale-desktop:200 /scale:180
 ```
 ### Reverse Shell
 On local machine 

@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "712b4e78dde1c894",
+        "id": "0ba3d338c58ef650",
         "type": "tabs",
         "children": [
           {
-            "id": "817e3cc01a203b90",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Common Applications/Tomcat.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "49b90855dbe0426b",
+            "id": "2929bfcd397c2421",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -60,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "User-Force-Change-Password",
+                "query": "VERB Tampe",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Common Applications/Tomcat.md",
+                "file": "HTB Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Common Applications/Tomcat.md",
+                "file": "HTB Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Common Applications/Tomcat.md"
+                "file": "HTB Notes.md"
               }
             }
           },
@@ -177,44 +165,45 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8dfe03d359b44dd3",
+  "active": "2929bfcd397c2421",
   "lastOpenFiles": [
-    "Malware Analysis",
-    "Common Applications/Jenkins.md",
-    "Active Directory/Access Control List  Abuse.md",
-    "Active Directory/Movement across the domain.md",
-    "Active Directory/Domain Trust.md",
-    "Common Applications/Tomcat.md",
-    "Windows/Windows Basics.md",
+    "Web/HTTP Verb Tampering.md",
     "HTB Notes.md",
-    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
-    "Windows/1 .Enumeration Commands.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
-    "File Transfers/Windows Files Transfers.md",
-    "Windows/PrivEsc/3. Windows Group Privileges.md",
-    "Windows/PrivEsc/4. Attacking Windows.md",
-    "Windows/PrivEsc/6.  Additional Techniques.md",
-    "Windows/PrivEsc/9. HTB Cheat Sheet.md",
-    "Windows/PrivEsc/Legacy Operating Systems.md",
-    "Windows/PrivEsc/5. Credential Hunting.md",
-    "Windows/Persistence and Logs.md",
-    "Windows/PowerShell.md",
-    "Note Taking + Report Writing.md",
-    "File Upload/File Upload Basics.md",
-    "Web/Cross Site & Server Side Request Forgery.md",
-    "Web/Directory Enumeration.md",
-    "Web/XXE.md",
+    "Web/Insecure Direct Object References (IDOR).md",
     "Web/XSS.md",
-    "0. Images/Pasted image 20231020105417.png",
-    "0. Images/Pasted image 20231020102951.png",
-    "0. Images/Pasted image 20231020105416.png",
-    "0. Images/Pasted image 20231020103151.png",
-    "0. Images/Pasted image 20231019135502.png",
-    "0. Images/Pasted image 20231019135128.png",
-    "0. Images/Pasted image 20231019134814.png",
-    "0. Images/Pasted image 20231019134809.png",
-    "0. Images/Pasted image 20231019134705.png",
-    "0. Images/Pasted image 20231019133502.png",
+    "Web/XXE.md",
+    "Note Taking + Report Writing.md",
+    "3. Common Services/DNS/DNS Enum.md",
+    "2. Footprinting/2. Domain Information.md",
+    "3. Common Services/SMTP/Attacking SMTP.md",
+    "1. Tools/ffuf_cheatsheet.md",
+    "Active Directory/2. Finding a Foothold.md",
+    "Active Directory/1. Active Directory Enumiration.md",
+    "3. Common Services/NetBIOS/NetBIOS Enumeration.md",
+    "3. Common Services/LDAP/LDAP Enumeration.md",
+    "Password Attacks/Remote Password Attacks.md",
+    "3. Common Services/SMB/Attacking SMB.md",
+    "3. Common Services/DNS/Basics of DNS.md",
+    "3. Common Services/DNS/Attacking DNS.md",
+    "3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
+    "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
+    "Linux/PrivEsc/Service-Based Privilege Escalation.md",
+    "Linux/PrivEsc/zLinux PrivEsc Mega.md",
+    "Linux/PrivEsc/Environment-based Priv-Esc.md",
+    "Linux/PrivEsc/1. Basic Enumeration.md",
+    "Shells and Payloads/Shell.md",
+    "3. Common Services/SNMP/SNMP Port UDP161+2.md",
+    "Pasted image 20231101094930.png",
+    "Pasted image 20231031105602.png",
+    "Pasted image 20231031105559.png",
+    "0. Images/Pasted image 20231031105017.png",
+    "0. Images/Pasted image 20231031105015.png",
+    "0. Images/Pasted image 20231031104135.png",
+    "0. Images/Pasted image 20231031095419.png",
+    "0. Images/Pasted image 20231031095404.png",
+    "0. Images/Pasted image 20231031090614.png",
+    "0. Images/Pasted image 20231031094901.png",
+    "Malware Analysis",
     "Common Applications/Miscellaneous Applications",
     "Common Applications/Miscellaneous Applications/Thick Client Applications",
     "Common Applications/Miscellaneous Applications/Common Gateway Interfacces",
@@ -224,7 +213,6 @@
     "Common Applications/Content Management Systems/Untitled",
     "Common Applications/Miscellaneous Applications/Content Management Systems",
     "Common Applications",
-    "Post Exploitation",
     "Notes MindMap.canvas",
     "Untitled.canvas"
   ]

