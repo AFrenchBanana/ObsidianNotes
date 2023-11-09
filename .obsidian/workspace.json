@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2929bfcd397c2421",
+            "id": "704ab93aeb60a5bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "VERB Tampe",
+                "query": "XSS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -165,20 +165,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2929bfcd397c2421",
+  "active": "704ab93aeb60a5bd",
   "lastOpenFiles": [
-    "Web/HTTP Verb Tampering.md",
-    "HTB Notes.md",
-    "Web/Insecure Direct Object References (IDOR).md",
     "Web/XSS.md",
-    "Web/XXE.md",
+    "File Upload/File Upload Basics.md",
+    "HTB Notes.md",
     "Note Taking + Report Writing.md",
+    "Web/File Inclusion.md",
+    "Web/Cross Site & Server Side Request Forgery.md",
+    "Active Directory/1. Active Directory Enumiration.md",
+    "Web/HTTP Verb Tampering.md",
+    "Web/Insecure Direct Object References (IDOR).md",
+    "Web/XXE.md",
     "3. Common Services/DNS/DNS Enum.md",
     "2. Footprinting/2. Domain Information.md",
     "3. Common Services/SMTP/Attacking SMTP.md",
     "1. Tools/ffuf_cheatsheet.md",
     "Active Directory/2. Finding a Foothold.md",
-    "Active Directory/1. Active Directory Enumiration.md",
     "3. Common Services/NetBIOS/NetBIOS Enumeration.md",
     "3. Common Services/LDAP/LDAP Enumeration.md",
     "Password Attacks/Remote Password Attacks.md",
@@ -190,9 +193,6 @@
     "Linux/PrivEsc/Service-Based Privilege Escalation.md",
     "Linux/PrivEsc/zLinux PrivEsc Mega.md",
     "Linux/PrivEsc/Environment-based Priv-Esc.md",
-    "Linux/PrivEsc/1. Basic Enumeration.md",
-    "Shells and Payloads/Shell.md",
-    "3. Common Services/SNMP/SNMP Port UDP161+2.md",
     "Pasted image 20231101094930.png",
     "Pasted image 20231031105602.png",
     "Pasted image 20231031105559.png",

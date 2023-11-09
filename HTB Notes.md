@@ -1,18 +1,38 @@
 ## Fortress AWS
 
+### Cookies
+`aws_auth:eyJhbGciOiJFUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJhY2NvdW50X3N0YXR1cyI6ZmFsc2V9.N38eQSEc9aiE2YKNelsf2KvmhfjA8CS8PGVUGkdUeAzuBvrKkF_Wun3IoMsG3KqAD0VksJIypsXU-10SQ2VNqQ`
+
+``
 ### Domains:
 jobs.amzcorp.local
-
+workflow.amzcorp.local
+	http://jobs.amzcorp.local/api/v4/status
+	http://jobs.amzcorp.local/api/v4/applications/get
+	http://jobs.amzcorp.local/api/v4/roles/get
+	http://jobs.amzcorp.local/api/v4/users/get
+	http://jobs.amzcorp.local/api/v4/tokens/get
+		/generate
+	http://jobs.amzcorp.local/api/v4/logs/get_logs
+		/get
+		
 inventory.amzcorp.local
 	Can Access /emails
 
 cloud.amzcorp.local
+	need api key 
 
+logs.amzcorp.local
+	nothing accessed so far 
 
+services.amzcorp.local
+	redirects to jobs
+	
+company-support.amzcorp.local
+	provides with a cookie:
+		aws-auth
 
-
-
-app.js
+app.js . Found on Job Website
 ```js
 "use strict";
 const d = document;
@@ -649,4 +669,5 @@ function GetLogData() {
     };
     xhr.send();
 }
+
 ```
