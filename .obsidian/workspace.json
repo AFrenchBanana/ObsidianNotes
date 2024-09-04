@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "31b04e09570bee90",
+        "id": "7f9cf2a8fe59b49c",
         "type": "tabs",
         "children": [
           {
-            "id": "a4d6c668476312c0",
+            "id": "305daf28e4d7bb31",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Common Applications/WordPress.md",
+                "file": "Web/OSWE/Useful Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wordpress r",
+                "query": "SeIncreaseWorkingSetPrivilege",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Common Applications/WordPress.md",
+                "file": "Web/OSWE/Useful Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Common Applications/WordPress.md",
+                "file": "Web/OSWE/Useful Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Common Applications/WordPress.md"
+                "file": "Web/OSWE/Useful Notes.md"
               }
             }
           },
@@ -144,16 +143,18 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,34 +167,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "da6ba649dec6df11",
+  "active": "305daf28e4d7bb31",
   "lastOpenFiles": [
-    "2. Footprinting/Information Gathering/Vulnerability Scanning.md",
-    "Pivoting and Port-Forwarding/Pivoting and Port Forwarding.md",
-    "Windows/PrivEsc/4. Attacking Windows.md",
-    "Active Directory/Domain Trust.md",
-    "3. Common Services/SQL/MSSQL/Attacking MSSQL.md",
-    "3. Common Services/SQL/MSSQL/MSSQL Port 1443.md",
-    "Active Directory/3. Initial Access.md",
-    "Active Directory/Kerberoasting.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
-    "File Transfers/Windows Files Transfers.md",
-    "File Transfers/Linux File Transfers.md",
-    "Password Attacks/Lateral Movement.md",
-    "3. Common Services/DNS/DNS Enum.md",
-    "2. Footprinting/Information Gathering/Active Gathering.md",
+    "Pentest Notes.md",
+    "Web/OSWE/Useful Notes.md",
+    "Web/OSWE",
     "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+    "Windows/PrivEsc/2. Windows User Privileges.md",
+    "Windows/1 .Enumeration Commands.md",
     "3. Common Services/SMB/Attacking SMB.md",
-    "Windows/PrivEsc/9. HTB Cheat Sheet.md",
-    "Shells and Payloads/Shell.md",
-    "Active Directory/2. Finding a Foothold.md",
-    "Active Directory/Movement across the domain.md",
-    "Active Directory/Access Control List  Abuse.md",
-    "3. Common Services/SMB/SMB  Enumeration.md",
-    "3. Common Services/SMB/Interacting with SMB.md",
     "Active Directory/1. Active Directory Enumiration.md",
-    "3. Common Services/IMAP + POP3/Email Attack.md",
-    "3. Common Services/IMAP + POP3/IMAP + POP3 Port 110 143 993 995.md",
+    "Active Directory/2. Finding a Foothold.md",
+    "1. Tools/ffuf_cheatsheet.md",
+    "Web/Directory Enumeration.md",
+    "Active Directory/Movement across the domain.md",
+    "1. Tools/Login_BruteForcing.md",
+    "1. Tools/Password Attacks Cheatsheet.md",
+    "1. Tools/nmap-cheatsheet.md",
+    "Linux/PrivEsc/Service-Based Privilege Escalation.md",
+    "3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
+    "Linux/PrivEsc/1. Information Gathering.md",
+    "Linux/PrivEsc/Linux Internals Priv Esc.md",
+    "Linux/PrivEsc/Environment-based Priv-Esc.md",
+    "Linux/PrivEsc/Permission-based Priv Esc.md",
+    "Linux/PrivEsc/zLinux PrivEsc Mega.md",
+    "Active Directory/Hardening AD.md",
+    "Windows/PrivEsc/4. Attacking Windows.md",
+    "Windows/PrivEsc/3. Windows Group Privileges.md",
+    "Password Attacks/Lateral Movement.md",
+    "Active Directory/3. Initial Access.md",
     "Pasted image 20231101094930.png",
     "Pasted image 20231031105602.png",
     "Pasted image 20231031105559.png",
@@ -213,7 +215,6 @@
     "Common Applications/Miscellaneous Applications/Servlet Containers & Software Development",
     "Common Applications/Content Management Systems/Untitled",
     "Common Applications/Miscellaneous Applications/Content Management Systems",
-    "Common Applications",
     "Notes MindMap.canvas",
     "Untitled.canvas"
   ]
