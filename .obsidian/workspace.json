@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7f9cf2a8fe59b49c",
+        "id": "f6a16d710cfb7884",
         "type": "tabs",
         "children": [
           {
-            "id": "305daf28e4d7bb31",
+            "id": "9ae8a2688e9f9771",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/OSWE/Useful Notes.md",
+                "file": "CCNA/OSPF - Open Shortest Path First.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "OSPF - Open Shortest Path First"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -48,13 +52,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SeIncreaseWorkingSetPrivilege",
+                "query": "dynamic-",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,14 +68,17 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 344.5,
+    "collapsed": true
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -85,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web/OSWE/Useful Notes.md",
+                "file": "CCNA/OSPF - Open Shortest Path First.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +102,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for OSPF - Open Shortest Path First"
             }
           },
           {
@@ -102,10 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web/OSWE/Useful Notes.md",
+                "file": "CCNA/OSPF - Open Shortest Path First.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from OSPF - Open Shortest Path First"
             }
           },
           {
@@ -116,7 +129,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web/OSWE/Useful Notes.md"
-              }
+                "file": "CCNA/OSPF - Open Shortest Path First.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of OSPF - Open Shortest Path First"
             }
           },
           {
@@ -134,7 +151,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -146,11 +165,23 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "b751ceeaff72d79c",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -164,57 +195,58 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "305daf28e4d7bb31",
+  "active": "9ae8a2688e9f9771",
   "lastOpenFiles": [
-    "Pentest Notes.md",
-    "Web/OSWE/Useful Notes.md",
-    "Web/OSWE",
-    "Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
-    "Windows/PrivEsc/2. Windows User Privileges.md",
-    "Windows/1 .Enumeration Commands.md",
-    "3. Common Services/SMB/Attacking SMB.md",
-    "Active Directory/1. Active Directory Enumiration.md",
-    "Active Directory/2. Finding a Foothold.md",
-    "1. Tools/ffuf_cheatsheet.md",
-    "Web/Directory Enumeration.md",
-    "Active Directory/Movement across the domain.md",
-    "1. Tools/Login_BruteForcing.md",
-    "1. Tools/Password Attacks Cheatsheet.md",
-    "1. Tools/nmap-cheatsheet.md",
-    "Linux/PrivEsc/Service-Based Privilege Escalation.md",
-    "3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
-    "Linux/PrivEsc/1. Information Gathering.md",
-    "Linux/PrivEsc/Linux Internals Priv Esc.md",
-    "Linux/PrivEsc/Environment-based Priv-Esc.md",
-    "Linux/PrivEsc/Permission-based Priv Esc.md",
-    "Linux/PrivEsc/zLinux PrivEsc Mega.md",
-    "Active Directory/Hardening AD.md",
-    "Windows/PrivEsc/4. Attacking Windows.md",
-    "Windows/PrivEsc/3. Windows Group Privileges.md",
-    "Password Attacks/Lateral Movement.md",
-    "Active Directory/3. Initial Access.md",
-    "Pasted image 20231101094930.png",
-    "Pasted image 20231031105602.png",
-    "Pasted image 20231031105559.png",
-    "0. Images/Pasted image 20231031105017.png",
-    "0. Images/Pasted image 20231031105015.png",
-    "0. Images/Pasted image 20231031104135.png",
-    "0. Images/Pasted image 20231031095419.png",
-    "0. Images/Pasted image 20231031095404.png",
-    "0. Images/Pasted image 20231031090614.png",
-    "0. Images/Pasted image 20231031094901.png",
-    "Malware Analysis",
+    "Pasted image 20241017201755.png",
+    "Pasted image 20241017201753.png",
+    "0. Images/Pasted image 20241016204138.png",
+    "CCNA/OSPF - Open Shortest Path First.md",
+    "0. Images/Pasted image 20241016204947.png",
+    "0. Images/Pasted image 20241016204139.png",
+    "0. Images/Pasted image 20241016203805.png",
+    "CCNA",
+    "Pentesting/Pentest Notes.md",
+    "Pentesting/Web/OSWE/ManageEngine Applications Manager AMUserResourcesSyncServlet SQL Injection RCE.md",
+    "Pentesting",
+    "Pentesting/Web/OSWE/Useful Notes.md",
+    "Pentesting/Password Attacks/Lateral Movement.md",
+    "Pentesting/Active Directory/3. Initial Access.md",
+    "Pentesting/57b2030e430d9e185c47f350b002c5f0-procmon.png",
+    "Pentesting/Web/OSWE/Source Code Recovery.md",
+    "Pentesting/376e160567eb4e10dabdac2e62f32bbd-Picture27.png",
+    "0. Images/559b6df0ce7b00de5a995bc1a6f217c2-Picture31 1.png",
+    "Pentesting/76d2e09cf005266009831d42a5b51101-Picture26.png",
+    "0. Images/aae32ff2fabbc2d1927a397dda10c036-Picture25.png",
+    "Web/OSWE/Debugging.md",
+    "Pentesting/Web/OSWE/Common HTTP Routing Patterns.md",
+    "Pentesting/Web/OSWE",
+    "Pentesting/Windows/PrivEsc/8. Windows - Privilege Escalation Cheat Sheet.md",
+    "Pentesting/Windows/PrivEsc/2. Windows User Privileges.md",
+    "Pentesting/Windows/1 .Enumeration Commands.md",
+    "Pentesting/3. Common Services/SMB/Attacking SMB.md",
+    "Pentesting/Active Directory/1. Active Directory Enumiration.md",
+    "Pentesting/Active Directory/2. Finding a Foothold.md",
+    "Pentesting/1. Tools/ffuf_cheatsheet.md",
+    "Pentesting/Web/Directory Enumeration.md",
+    "Pentesting/Active Directory/Movement across the domain.md",
+    "Pentesting/1. Tools/Login_BruteForcing.md",
+    "Pentesting/1. Tools/Password Attacks Cheatsheet.md",
+    "Pentesting/1. Tools/nmap-cheatsheet.md",
+    "Pentesting/Linux/PrivEsc/Service-Based Privilege Escalation.md",
+    "Pentesting/3. Common Services/SQL/MYSQL/Attacking MYSQL.md",
+    "Pentesting/Linux/PrivEsc/1. Information Gathering.md",
+    "Pentesting/Linux/PrivEsc/Linux Internals Priv Esc.md",
+    "Pentesting/Malware Analysis",
     "Common Applications/Miscellaneous Applications",
     "Common Applications/Miscellaneous Applications/Thick Client Applications",
     "Common Applications/Miscellaneous Applications/Common Gateway Interfacces",
     "Common Applications/Miscellaneous Applications/Custom Service Mgmt & Configuration Mangement",
     "Common Applications/Miscellaneous Applications/Infrastructure & Network Monitoring Tools",
     "Common Applications/Miscellaneous Applications/Servlet Containers & Software Development",
-    "Common Applications/Content Management Systems/Untitled",
-    "Common Applications/Miscellaneous Applications/Content Management Systems",
     "Notes MindMap.canvas",
     "Untitled.canvas"
   ]
