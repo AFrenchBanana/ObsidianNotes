@@ -4,31 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bc0f75129de01b53",
+        "id": "ff07d32c671204d5",
         "type": "tabs",
         "children": [
           {
-            "id": "d5d8f79663f7ef16",
+            "id": "c6f9a81cbd0aa45f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "0. Images/6eb6b46c5bfff2ab61b0d04375ad0154-Picture30.png"
+                "file": "Pentesting/Web/OSWE/DotNetNuke/DotNetNuke Cookie Deserialization RCE.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "6eb6b46c5bfff2ab61b0d04375ad0154-Picture30"
-            }
-          },
-          {
-            "id": "c25b3e944400234e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.7"
+              "icon": "lucide-file",
+              "title": "DotNetNuke Cookie Deserialization RCE"
             }
           }
         ]
@@ -88,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 344.5,
+    "collapsed": true
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -209,11 +200,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8dfe03d359b44dd3",
+  "active": "c6f9a81cbd0aa45f",
   "lastOpenFiles": [
+    "Pentesting/Web/OSWE/Common HTTP Routing Patterns.md",
+    "Pentesting/Web/OSWE/Source Code Recovery.md",
+    "Pentesting/Web/OSWE/Useful Notes.md",
+    "Pentesting/Web/OSWE/DotNetNuke/DotNetNuke Cookie Deserialization RCE.md",
+    "Pentesting/Web/OSWE/ManageEngine/ManageEngine Applications Manager AMUserResourcesSyncServlet SQL Injection RCE.md",
+    "Pentesting/Web/OSWE/DotNetNuke",
+    "Pentesting/Web/OSWE/ManageEngine/Resources/large_object_rev_shell.py",
     "0. Images/6eb6b46c5bfff2ab61b0d04375ad0154-Picture30.png",
     "6eb6b46c5bfff2ab61b0d04375ad0154-Picture30 1.png",
-    "Pentesting/Web/OSWE/ManageEngine/ManageEngine Applications Manager AMUserResourcesSyncServlet SQL Injection RCE.md",
     "Pentesting/Web/OSWE/ManageEngine/Resources/rev_shell.c",
     "Pentesting/Web/OSWE/ManageEngine/Resources/poc.c",
     "Pentesting/Web/OSWE/ManageEngine/rev_shell_pg_extensions.py",
@@ -221,13 +218,8 @@
     "Pentesting/Web/OSWE/ManageEngine/revsehll.vbs",
     "Pentesting/Web/OSWE/ManageEngine/rev_shell_pg_extensions",
     "Pentesting/Web/OSWE/ManageEngine/AMUserResourceSyncServlet.java.md",
-    "Pentesting/Web/OSWE/Common HTTP Routing Patterns.md",
-    "Pentesting/Web/OSWE/Useful Notes.md",
     "Pentesting/Web/OSWE/ManageEngine/Resources/AMUserResourcesSyncServlet.java",
     "Pentesting/Web/OSWE/ManageEngine/Resources/random_sqli_scripts.py",
-    "Pentesting/Web/OSWE/ManageEngine/malicous.vbs",
-    "Pentesting/Web/OSWE/ManageEngine/Resources/web.xml",
-    "Pentesting/Web/OSWE/Source Code Recovery.md",
     "Pentesting/Web/Cross Site & Server Side Request Forgery.md",
     "0. Images/5e462ec2003ec7b2d69439e0f95700ca-Picture29.png",
     "0. Images/57b2030e430d9e185c47f350b002c5f0-procmon.png",
