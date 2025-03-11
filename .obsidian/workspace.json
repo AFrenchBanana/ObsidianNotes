@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ff07d32c671204d5",
+        "id": "68367701e604154c",
         "type": "tabs",
         "children": [
           {
-            "id": "c6f9a81cbd0aa45f",
+            "id": "43f804cdb6f975ac",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "0. Images/1bb95b5a1eda583c47acedcd2aa179bc-Picture12a.png"
+                "file": "Pentesting/Web/OSWE/DotNetNuke/DotNetNuke Cookie Deserialization RCE.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "1bb95b5a1eda583c47acedcd2aa179bc-Picture12a"
+              "icon": "lucide-file",
+              "title": "DotNetNuke Cookie Deserialization RCE"
             }
           }
         ]
@@ -76,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 344.5,
+    "collapsed": true
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -197,19 +200,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8dfe03d359b44dd3",
+  "active": "43f804cdb6f975ac",
   "lastOpenFiles": [
     "Pentesting/Web/OSWE/DotNetNuke/DotNetNuke Cookie Deserialization RCE.md",
-    "0. Images/be7c1faee9d546eadb07d27020fa4dae-Picture44 1.png",
-    "0. Images/bd0bc1c3c5a54f0bd9cfdcde02466776-Picture43 1.png",
-    "0. Images/cf6f17b2c23dd05c2b41f638932736c6-Picture42.png",
-    "0. Images/98dc5ab0f81f888b8ea193dcaf4bda47-Picture41 1.png",
-    "0. Images/98dc5ab0f81f888b8ea193dcaf4bda47-Picture41.png",
-    "0. Images/19e8e34e2b068e6d68883a2224c064d5-Picture6 1.png",
-    "0. Images/54b9c9085d8ab9f589ac64b28630b058-Picture5 2.png",
-    "0. Images/54b9c9085d8ab9f589ac64b28630b058-Picture5 1.png",
-    "0. Images/54b9c9085d8ab9f589ac64b28630b058-Picture5.png",
-    "0. Images/6cd656cb021e626c072d8ab34429b3cb-Picture4.png",
+    "6b58ec62ed72af612d03557e78501b65-Picture29a.png",
+    "34ea07badf100cae72715a124ef9f035-Picture34 1.png",
+    "34ea07badf100cae72715a124ef9f035-Picture34.png",
+    "4a4e6a1492b02860903aa8a3bf756a21-Picture33.png",
+    "55bf6dc9bb3ad20a87a884ffdac78595-Picture32.png",
+    "0. Images/6a956b3404cd511929f19dcd53ea6131-Picture15.png",
+    "0. Images/7778031deb92d473adacb13a9830c172-Picture28 2.png",
+    "0. Images/7778031deb92d473adacb13a9830c172-Picture28 1.png",
+    "0. Images/7778031deb92d473adacb13a9830c172-Picture28.png",
+    "0. Images/376e160567eb4e10dabdac2e62f32bbd-Picture27 1.png",
     "Pentesting/Web/OSWE/Common HTTP Routing Patterns.md",
     "Pentesting/Web/OSWE/Source Code Recovery.md",
     "Pentesting/Web/OSWE/Useful Notes.md",
