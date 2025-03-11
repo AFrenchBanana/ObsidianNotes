@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "68367701e604154c",
+        "id": "b5b67fed0be61d9d",
         "type": "tabs",
         "children": [
           {
-            "id": "43f804cdb6f975ac",
+            "id": "d1bc71b11a4065ad",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pentesting/Web/OSWE/DotNetNuke/DotNetNuke Cookie Deserialization RCE.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "DotNetNuke Cookie Deserialization RCE"
+              "title": "New tab"
             }
           }
         ]
@@ -200,14 +196,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "43f804cdb6f975ac",
+  "active": "d1bc71b11a4065ad",
   "lastOpenFiles": [
+    "0. Images/4a4e6a1492b02860903aa8a3bf756a21-Picture33.png",
     "Pentesting/Web/OSWE/DotNetNuke/DotNetNuke Cookie Deserialization RCE.md",
-    "6b58ec62ed72af612d03557e78501b65-Picture29a.png",
-    "34ea07badf100cae72715a124ef9f035-Picture34 1.png",
-    "34ea07badf100cae72715a124ef9f035-Picture34.png",
-    "4a4e6a1492b02860903aa8a3bf756a21-Picture33.png",
-    "55bf6dc9bb3ad20a87a884ffdac78595-Picture32.png",
+    "0. Images/6b58ec62ed72af612d03557e78501b65-Picture29a.png",
+    "0. Images/34ea07badf100cae72715a124ef9f035-Picture34 1.png",
+    "0. Images/34ea07badf100cae72715a124ef9f035-Picture34.png",
+    "0. Images/55bf6dc9bb3ad20a87a884ffdac78595-Picture32.png",
     "0. Images/6a956b3404cd511929f19dcd53ea6131-Picture15.png",
     "0. Images/7778031deb92d473adacb13a9830c172-Picture28 2.png",
     "0. Images/7778031deb92d473adacb13a9830c172-Picture28 1.png",
