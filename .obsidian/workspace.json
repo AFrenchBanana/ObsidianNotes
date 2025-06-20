@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b5b67fed0be61d9d",
+        "id": "4ac793a35715393e",
         "type": "tabs",
         "children": [
           {
-            "id": "d1bc71b11a4065ad",
+            "id": "839115d9762c6783",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/CKA/Interacting with Kuberenets/Rolling Updates and Rollbacks.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Rolling Updates and Rollbacks"
             }
           }
         ]
@@ -74,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5,
-    "collapsed": true
+    "width": 351.5
   },
   "right": {
     "id": "c573b31e9bc66ed6",
@@ -196,22 +199,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d1bc71b11a4065ad",
+  "active": "839115d9762c6783",
   "lastOpenFiles": [
+    "Kubernetes/CKA/Interacting with Kuberenets/Autoscaling.md",
+    "Kubernetes/CKA/Interacting with Kuberenets/Rolling Updates and Rollbacks.md",
+    "Kubernetes/CKA/Interacting with Kuberenets/Deployments.md",
+    "Kubernetes/CKA/Interacting with Kuberenets/Service Discovery.md",
+    "Kubernetes/CKA/Interacting with Kuberenets/Services.md",
+    "Kubernetes/CKA/Kubernetes Overview.md",
+    "Pasted image 20250620105949.png",
+    "Pasted image 20250620105947.png",
+    "0. Images/Pasted image 20250620110026.png",
+    "Kubernetes/CKA/Interacting with Kuberenets/Multi Container Pods.md",
+    "0. Images/Pasted image 20250620103623.png",
+    "Pasted image 20250620103612.png",
+    "0. Images/Pasted image 20250620103556.png",
+    "Kubernetes/CKA/Interacting with Kuberenets/Pods.md",
+    "Kubernetes/CKA/Interacting with Kuberenets/Interacting with Kubernetes.md",
+    "Kubernetes/CKA/Interacting with Kuberenets",
+    "Kubernetes/CKA/Terms.md",
+    "Kubernetes/CKA",
+    "Pentesting/Web/OSWE/Useful Notes.md",
+    "Kubernetes",
     "0. Images/4a4e6a1492b02860903aa8a3bf756a21-Picture33.png",
     "Pentesting/Web/OSWE/DotNetNuke/DotNetNuke Cookie Deserialization RCE.md",
     "0. Images/6b58ec62ed72af612d03557e78501b65-Picture29a.png",
     "0. Images/34ea07badf100cae72715a124ef9f035-Picture34 1.png",
     "0. Images/34ea07badf100cae72715a124ef9f035-Picture34.png",
-    "0. Images/55bf6dc9bb3ad20a87a884ffdac78595-Picture32.png",
-    "0. Images/6a956b3404cd511929f19dcd53ea6131-Picture15.png",
-    "0. Images/7778031deb92d473adacb13a9830c172-Picture28 2.png",
-    "0. Images/7778031deb92d473adacb13a9830c172-Picture28 1.png",
-    "0. Images/7778031deb92d473adacb13a9830c172-Picture28.png",
-    "0. Images/376e160567eb4e10dabdac2e62f32bbd-Picture27 1.png",
     "Pentesting/Web/OSWE/Common HTTP Routing Patterns.md",
     "Pentesting/Web/OSWE/Source Code Recovery.md",
-    "Pentesting/Web/OSWE/Useful Notes.md",
     "Pentesting/Web/OSWE/ManageEngine/ManageEngine Applications Manager AMUserResourcesSyncServlet SQL Injection RCE.md",
     "Pentesting/Web/OSWE/DotNetNuke",
     "Pentesting/Web/OSWE/ManageEngine/Resources/large_object_rev_shell.py",
@@ -220,10 +236,7 @@
     "Pentesting/Web/OSWE/ManageEngine/rev_shell_pg_extensions.py",
     "Pentesting/Web/OSWE/ManageEngine/Resources",
     "Pentesting/Web/OSWE/ManageEngine/revsehll.vbs",
-    "Pentesting/Web/OSWE/ManageEngine/rev_shell_pg_extensions",
     "Pentesting/Web/OSWE/ManageEngine/AMUserResourceSyncServlet.java.md",
-    "Pentesting/Web/OSWE/ManageEngine/Resources/AMUserResourcesSyncServlet.java",
-    "Pentesting/Web/OSWE/ManageEngine/Resources/random_sqli_scripts.py",
     "Pentesting/Web/Cross Site & Server Side Request Forgery.md",
     "CCNA/OSPF - Open Shortest Path First.md",
     "Pentesting/Pentest Notes.md",
@@ -234,15 +247,6 @@
     "Pentesting/Windows/PrivEsc/2. Windows User Privileges.md",
     "Pentesting/Windows/1 .Enumeration Commands.md",
     "Pentesting/3. Common Services/SMB/Attacking SMB.md",
-    "Pentesting/Active Directory/1. Active Directory Enumiration.md",
-    "Pentesting/Active Directory/2. Finding a Foothold.md",
-    "Pentesting/1. Tools/ffuf_cheatsheet.md",
-    "Pentesting/Web/Directory Enumeration.md",
-    "Pentesting/Active Directory/Movement across the domain.md",
-    "Pentesting/1. Tools/Login_BruteForcing.md",
-    "Pentesting/1. Tools/Password Attacks Cheatsheet.md",
-    "Pentesting/1. Tools/nmap-cheatsheet.md",
-    "Pentesting/Linux/PrivEsc/Service-Based Privilege Escalation.md",
     "Notes MindMap.canvas",
     "Untitled.canvas"
   ]
